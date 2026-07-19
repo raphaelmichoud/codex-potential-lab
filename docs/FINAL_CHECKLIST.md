@@ -5,7 +5,7 @@
 - [ ] Open `index.html` and test the default project.
 - [ ] Click Magic List and verify the case loads.
 - [ ] Open GPT-5.6 Studio.
-- [ ] Replace the sample GPT response with a real GPT-5.6 response.
+- [ ] Verify the real Magic List GPT-5.6 response loads.
 - [ ] Show Submission Readiness Score, Build Gap Finder, and Judge Simulation.
 - [ ] Export the Markdown pack.
 

@@ -18,10 +18,10 @@ For the demo, I use Magic List as a real-world test case. Magic List already exi
 
 ## 0:35 - 1:05
 
-Open the GPT-5.6 Studio tab. Show the generated prompt, then show the pasted response or sample response.
+Open the GPT-5.6 Studio tab. Show the generated prompt, then show the loaded Magic List GPT-5.6 response.
 
 Voiceover:
-The Studio creates a structured prompt for GPT-5.6. After asking GPT-5.6, I paste the response back into the app. Codex Potential Lab then checks whether the answer contains the signals a strong product submission needs. GPT-5.6 also recommended making validation the core value, not just text generation, so I added a Submission Readiness Score, Build Gap Finder, and Judge Simulation.
+The Studio creates a structured prompt for GPT-5.6. After asking GPT-5.6, I load the real response back into the app. For Magic List, GPT-5.6 recommends positioning the app around mental clarity and privacy, with ideas like Brain Dump Mode and Daily Focus. GPT-5.6 also recommended making Codex Potential Lab itself focus on validation, so I added a Submission Readiness Score, Build Gap Finder, and Judge Simulation.
 
 ## 1:05 - 1:35
 

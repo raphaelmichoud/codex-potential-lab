@@ -69,6 +69,7 @@ Public facts used by the app live in `data/magic-list-public-facts.json`.
 - `docs/DEMO_WALKTHROUGH.md`: screen-by-screen demo instructions.
 - `docs/CODEX_AND_GPT56_USAGE.md`: Codex and GPT-5.6 usage narrative.
 - `docs/GPT56_CODEX_POTENTIAL_LAB_RESPONSE.md`: real GPT-5.6 critique used to improve the project.
+- `docs/GPT56_MAGIC_LIST_RESPONSE.md`: real GPT-5.6 response used for the Magic List proof case.
 - `docs/MAGIC_LIST_BEFORE_AFTER.md`: before/after report for Magic List.
 - `docs/FINAL_CHECKLIST.md`: final submission checklist.
 
@@ -92,6 +93,8 @@ The real GPT-5.6 response in `docs/GPT56_CODEX_POTENTIAL_LAB_RESPONSE.md` recomm
 - Build Gap Finder;
 - Judge Simulation.
 
+The real GPT-5.6 response in `docs/GPT56_MAGIC_LIST_RESPONSE.md` is used as the Magic List proof case. It positions Magic List around mental clarity and privacy, recommends Brain Dump Mode, Daily Focus, Completion History, Natural-language Quick Add, and a Magic Capture Widget, and reinforces that Magic List is evidence for Codex Potential Lab rather than a project originally created by it.
+
 ## Recommended Devpost Category
 
 Developer Tools.
@@ -100,7 +103,7 @@ The project helps builders create better product plans, demos, and submissions.
 
 ## Final Items Before Submission
 
-- Paste the real GPT-5.6 response in the Studio during the demo.
+- Paste or load the real GPT-5.6 response in the Studio during the demo.
 - Export the Markdown pack.
 - Record a public YouTube demo under 3 minutes.
 - Add the Codex `/feedback` session ID.

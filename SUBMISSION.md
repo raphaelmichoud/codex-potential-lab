@@ -13,6 +13,7 @@ Codex Potential Lab is a local web app with:
 - generated mission, timeline and architecture map;
 - task board and risk register;
 - GPT-5.6 Studio with prompt, pasted response, signal analysis and exportable evidence;
+- Submission Readiness Score, Build Gap Finder and Judge Simulation;
 - Magic List real-world case study;
 - Markdown export for a submission pack;
 - responsive design and local-only execution.
@@ -23,11 +24,15 @@ Many builders can create a prototype but struggle to turn it into a clear produc
 
 ## Real-world proof case
 
-Magic List: Simple To-Do is used as a test case. The app already existed before this project. It is not presented as having been built by Codex Potential Lab. Instead, Magic List proves that Codex Potential Lab can analyze a real App Store product and produce positioning, roadmap, onboarding, ASO, demo and risk recommendations.
+Magic List: Simple To-Do is used as a test case. The app already existed before this project. It is not presented as having been built by Codex Potential Lab. Instead, Magic List proves that Codex Potential Lab can analyze a real App Store product and produce positioning, roadmap, onboarding, App Store, demo and risk recommendations.
+
+The Magic List proof case now uses a real GPT-5.6 response. That response positions Magic List as "The private to-do list that lets you think before you organize" and recommends Brain Dump Mode, Daily Focus, Completion History, Natural-language Quick Add and a Magic Capture Widget.
 
 ## How Codex and GPT-5.6 fit
 
 Codex was used to create the app, project structure, documentation, Magic List case study, generated visual asset integration and submission pack. GPT-5.6 is represented through a copy/paste Studio workflow: Codex Potential Lab generates the prompt, the builder queries GPT-5.6, then the response is pasted back and transformed into evidence and product decisions.
+
+Two GPT-5.6 traces are included: one critique of Codex Potential Lab that led to readiness scoring, gap detection and judge simulation, and one Magic List response that strengthens the real-world proof case.
 
 ## Category
 

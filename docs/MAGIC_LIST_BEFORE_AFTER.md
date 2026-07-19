@@ -26,7 +26,11 @@ The existing public story is good, but it can be sharpened.
 
 Recommended positioning:
 
-Private by default. Simple by design.
+The private to-do list that lets you think before you organize.
+
+Shorter line:
+
+Capture. Forget. Continue.
 
 Recommended wedge:
 
@@ -34,11 +38,12 @@ Magic List should not compete by adding every productivity feature. It can stand
 
 Recommended roadmap:
 
-1. Onboarding with instant starter lists: Today, Groceries, Ideas.
-2. Privacy Proof screen explaining no account, no tracking and local data.
-3. Lightweight reusable templates.
-4. Import/export for trust and portability.
-5. App Store screenshots that tell the privacy-first story visually.
+1. Brain Dump Mode for quickly entering many tasks without switching context.
+2. Daily Focus for one optional list that keeps the day simple.
+3. Completion History for lightweight progress and accidental recovery.
+4. Natural-language Quick Add for phrases like "Call Sarah tomorrow".
+5. Magic Capture Widget for one-tap capture from the Home Screen.
+6. App Store screenshots that show simplicity, privacy, local data and one-time purchase.
 
 ## Why this helps Codex Potential Lab
 
@@ -50,3 +55,7 @@ The Magic List case shows the tool working on a product with real constraints:
 - the output must be concrete enough to guide product, App Store and demo decisions.
 
 This makes Codex Potential Lab more convincing than a fictional-only demo.
+
+## GPT-5.6 proof
+
+The full response used for this update is stored in `docs/GPT56_MAGIC_LIST_RESPONSE.md`.

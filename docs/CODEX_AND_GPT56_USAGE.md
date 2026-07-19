@@ -49,9 +49,29 @@ Implemented from this critique:
 - Judge Simulation;
 - expanded Markdown export that includes these sections.
 
+The file `docs/GPT56_MAGIC_LIST_RESPONSE.md` contains the real GPT-5.6 response for the Magic List proof case.
+
+Key recommendations from that response:
+
+- position Magic List around mental clarity and privacy;
+- use the line "The private to-do list that lets you think before you organize";
+- add Brain Dump Mode;
+- add Daily Focus;
+- add Completion History;
+- add Natural-language Quick Add;
+- consider a Magic Capture Widget;
+- improve App Store screenshots around simplicity, privacy, local data, and one-time purchase;
+- never imply that Codex Potential Lab created Magic List.
+
+Implemented from this critique:
+
+- the Magic List button now loads the real GPT-5.6 response instead of a synthetic sample;
+- the GPT-5.6 Studio can analyze that response directly;
+- docs now distinguish between the Codex Potential Lab critique and the Magic List proof-case critique.
+
 ## Evidence to add before final submission
 
-- Paste the real GPT-5.6 response into the Studio during the video.
+- Paste or load the real GPT-5.6 response into the Studio during the video.
 - Export the Markdown pack after analysis.
 - Include the Codex `/feedback` session ID.
 - Keep dated commits showing the project was created or meaningfully extended during the submission period.

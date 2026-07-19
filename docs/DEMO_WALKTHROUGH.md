@@ -38,13 +38,17 @@ Show the response box and analysis cards.
 
 Say:
 
-After pasting a GPT-5.6 response, the app checks whether it contains the signals a strong project story needs: positioning, privacy, roadmap, onboarding, demo, and risks.
+After loading the real GPT-5.6 response, the app checks whether it contains the signals a strong project story needs: positioning, privacy, roadmap, onboarding, demo, and risks.
+
+Mention:
+
+For Magic List, GPT-5.6 recommends positioning the app as "The private to-do list that lets you think before you organize."
 
 Then open **Quality** and show the readiness panels.
 
 Say:
 
-The GPT-5.6 critique pushed the app toward validation. I added a Submission Readiness Score, Build Gap Finder, and Judge Simulation so the user sees what is missing before submission.
+The GPT-5.6 critique of Codex Potential Lab pushed the app toward validation. I added a Submission Readiness Score, Build Gap Finder, and Judge Simulation so the user sees what is missing before submission.
 
 ### 4. Show Mission And Architecture
 

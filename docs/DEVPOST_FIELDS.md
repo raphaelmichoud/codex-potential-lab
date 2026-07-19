@@ -20,6 +20,8 @@ The project includes Magic List as a real-world proof case. Magic List already e
 
 After a real GPT-5.6 critique, the app was extended with a Submission Readiness Score, Build Gap Finder, and Judge Simulation. This turns the project from a submission text generator into a validation cockpit.
 
+A second real GPT-5.6 response is included for Magic List. It recommends positioning Magic List around mental clarity and privacy, then proposes Brain Dump Mode, Daily Focus, Completion History, Natural-language Quick Add, and a Magic Capture Widget. That response is used as proof that Codex Potential Lab can improve a real product's roadmap and story without claiming to have created the original app.
+
 ## Inspiration
 
 Codex can do more than help with individual code changes. It can help shape the full arc of a project: product framing, implementation, quality, documentation, demo narrative, and final submission. Codex Potential Lab was built to make that end-to-end workflow visible.
@@ -36,6 +38,8 @@ The app includes a GPT-5.6 Studio. It creates a structured prompt, lets the buil
 
 A real GPT-5.6 response was used to improve the project. It recommended making validation the core value, not text generation. That feedback directly led to the Submission Readiness Score, Build Gap Finder, and Judge Simulation.
 
+A real GPT-5.6 response was also used for the Magic List case study. Codex Potential Lab loads that response, analyzes it, and turns it into evidence for positioning, roadmap, onboarding, demo story, and risks.
+
 ## Challenges
 
 The main challenge was building a project that demonstrates Codex's broader potential without making false claims about pre-existing work. Magic List is therefore positioned carefully as a real-world test case, not as something created by Codex Potential Lab.
@@ -45,6 +49,7 @@ The main challenge was building a project that demonstrates Codex's broader pote
 - Built a complete local app from a blank workspace.
 - Added a GPT-5.6 evidence workflow.
 - Used GPT-5.6 critique to add readiness scoring, gap detection, and judge simulation.
+- Used a second GPT-5.6 response to strengthen the Magic List proof case.
 - Added a real-world Magic List case study.
 - Created README, Devpost draft, video script, walkthrough, and checklist.
 - Published a public GitHub repository.
