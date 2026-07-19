@@ -36,14 +36,25 @@ Recommended wedge:
 
 Magic List should not compete by adding every productivity feature. It can stand out as a calm, privacy-first list app for people who want to write, check and move on without accounts, tracking, ads or subscription pressure.
 
-Recommended roadmap:
+Scope decision:
 
-1. Brain Dump Mode for quickly entering many tasks without switching context.
-2. Daily Focus for one optional list that keeps the day simple.
-3. Completion History for lightweight progress and accidental recovery.
-4. Natural-language Quick Add for phrases like "Call Sarah tomorrow".
-5. Magic Capture Widget for one-tap capture from the Home Screen.
-6. App Store screenshots that show simplicity, privacy, local data and one-time purchase.
+Keep:
+
+- the positioning: "Capture. Forget. Continue.";
+- App Store and onboarding polish around privacy, no account, no tracking, one-time purchase and data on device;
+- the demo narrative around mental clarity.
+
+Park:
+
+- Brain Dump Mode, because the current app already maps to "Vider ma tete";
+- Daily Focus;
+- Completion History;
+- Natural-language Quick Add;
+- Magic Capture Widget.
+
+Reason:
+
+With limited available product time and version 1.1.4 already in review, new feature work would create exactly the trap this product should avoid: a simple app becoming less simple. The useful output is positioning and ASO polish, not a feature roadmap.
 
 ## Why this helps Codex Potential Lab
 
@@ -58,4 +69,4 @@ This makes Codex Potential Lab more convincing than a fictional-only demo.
 
 ## GPT-5.6 proof
 
-The full response used for this update is stored in `docs/GPT56_MAGIC_LIST_RESPONSE.md`.
+The full response used for this update is stored in `docs/GPT56_MAGIC_LIST_RESPONSE.md`. The filtered product decision is intentionally narrower than the raw GPT output.

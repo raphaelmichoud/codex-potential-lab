@@ -431,7 +431,7 @@ h3 {
 
 .readiness-system {
   display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(280px, 1fr) minmax(260px, 0.8fr);
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
   gap: 12px;
   margin-top: 18px;
 }
@@ -445,7 +445,8 @@ h3 {
 
 .score-breakdown,
 .gap-list,
-.judge-grid {
+.judge-grid,
+.decision-list {
   display: grid;
   gap: 10px;
 }
@@ -482,7 +483,8 @@ h3 {
 }
 
 .gap-item,
-.judge-item {
+.judge-item,
+.decision-item {
   border: 1px solid var(--soft-line);
   border-radius: 8px;
   padding: 12px;
@@ -490,13 +492,15 @@ h3 {
 }
 
 .gap-item strong,
-.judge-item strong {
+.judge-item strong,
+.decision-item strong {
   display: block;
   margin-bottom: 5px;
 }
 
 .gap-item p,
-.judge-item p {
+.judge-item p,
+.decision-item p {
   margin-bottom: 0;
   color: var(--muted);
   line-height: 1.42;
@@ -508,6 +512,18 @@ h3 {
 
 .gap-item.ready {
   border-left: 5px solid var(--green);
+}
+
+.decision-item.keep {
+  border-left: 5px solid var(--green);
+}
+
+.decision-item.park {
+  border-left: 5px solid var(--amber);
+}
+
+.decision-item.skip {
+  border-left: 5px solid var(--red);
 }
 
 .task-board {

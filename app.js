@@ -87,6 +87,7 @@ const elements = {
   readiness: document.querySelector("#readinessPanel"),
   gaps: document.querySelector("#gapList"),
   judge: document.querySelector("#judgePanel"),
+  decision: document.querySelector("#decisionPanel"),
   checklist: document.querySelector("#checklist"),
   submission: document.querySelector("#submissionText"),
   gptPrompt: document.querySelector("#gptPrompt"),
@@ -228,8 +229,49 @@ function createReadinessSystem(profile, gptAnalysis, ambition, scope) {
   const total = clampScore(dimensions.reduce((sum, item) => sum + item.value, 0) / dimensions.length);
   const gaps = createBuildGaps(dimensions, gptAnalysis, profile);
   const judge = createJudgeSimulation(dimensions, gptAnalysis, total);
+  const decisions = createScopeDecisions(profile);
 
-  return { total, dimensions, gaps, judge };
+  return { total, dimensions, gaps, judge, decisions };
+}
+
+function createScopeDecisions(profile) {
+  if (profile.kind === "magic-list") {
+    return [
+      {
+        status: "keep",
+        title: "Keep: positioning",
+        body: "Use 'Capture. Forget. Continue.' and the private-to-do-list angle for ASO and future copy."
+      },
+      {
+        status: "keep",
+        title: "Keep: App Store polish",
+        body: "Prioritize screenshots around privacy, no account, no tracking, one-time purchase and data on device."
+      },
+      {
+        status: "park",
+        title: "Park: feature roadmap",
+        body: "Brain Dump already maps to 'Vider ma tete'. Daily Focus, History, NLP and Widget stay out of scope for now."
+      },
+      {
+        status: "skip",
+        title: "Avoid: scope creep",
+        body: "Do not add product features before the higher-priority voice site commands and August 1 reminder."
+      }
+    ];
+  }
+
+  return [
+    {
+      status: "keep",
+      title: "Keep: validation",
+      body: "Use GPT suggestions to improve readiness, gaps and judge simulation before adding more outputs."
+    },
+    {
+      status: "park",
+      title: "Park: extra deliverables",
+      body: "Landing pages, FAQs and changelogs are useful only after the core submission flow is clear."
+    }
+  ];
 }
 
 function createBuildGaps(dimensions, gptAnalysis, profile) {
@@ -548,6 +590,15 @@ function renderReadiness(readiness) {
       </div>
     `)
     .join("");
+
+  elements.decision.innerHTML = readiness.decisions
+    .map((item) => `
+      <div class="decision-item ${escapeHtml(item.status)}">
+        <strong>${escapeHtml(item.title)}</strong>
+        <p>${escapeHtml(item.body)}</p>
+      </div>
+    `)
+    .join("");
 }
 
 function renderTimeline() {
@@ -667,6 +718,10 @@ ${model.readiness.gaps.map((item) => `- ${item.title}: ${item.body}`).join("\n")
 ## Judge Simulation
 
 ${model.readiness.judge.map((item) => `- ${item.label}: ${item.value}/99 - ${item.note}`).join("\n")}
+
+## Scope Decision
+
+${model.readiness.decisions.map((item) => `- ${item.title}: ${item.body}`).join("\n")}
 
 ## Architecture
 

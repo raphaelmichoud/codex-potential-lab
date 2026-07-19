@@ -28,6 +28,8 @@ Magic List: Simple To-Do is used as a test case. The app already existed before 
 
 The Magic List proof case now uses a real GPT-5.6 response. That response positions Magic List as "The private to-do list that lets you think before you organize" and recommends Brain Dump Mode, Daily Focus, Completion History, Natural-language Quick Add and a Magic Capture Widget.
 
+Codex Potential Lab then applies scope discipline: keep the positioning and App Store/onboarding polish, but park new feature work for now. The product demonstrates how AI suggestions become prioritization decisions, not automatic implementation.
+
 ## How Codex and GPT-5.6 fit
 
 Codex was used to create the app, project structure, documentation, Magic List case study, generated visual asset integration and submission pack. GPT-5.6 is represented through a copy/paste Studio workflow: Codex Potential Lab generates the prompt, the builder queries GPT-5.6, then the response is pasted back and transformed into evidence and product decisions.

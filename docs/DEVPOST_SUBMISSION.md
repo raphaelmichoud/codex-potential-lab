@@ -24,7 +24,7 @@ The project includes a GPT-5.6 Studio. It generates a strong prompt for GPT-5.6,
 
 A real GPT-5.6 critique of Codex Potential Lab recommended making validation the core value, not text generation. That feedback directly led to the Submission Readiness Score, Build Gap Finder and Judge Simulation.
 
-The included Magic List case study makes the demo concrete. Magic List: Simple To-Do already existed before this project and is not claimed as newly created here. Instead, Codex Potential Lab uses public App Store facts and a real GPT-5.6 response about Magic List to generate positioning, roadmap, onboarding, App Store, demo and risk recommendations. This proves the tool can help real products, not only toy examples.
+The included Magic List case study makes the demo concrete. Magic List: Simple To-Do already existed before this project and is not claimed as newly created here. Instead, Codex Potential Lab uses public App Store facts and a real GPT-5.6 response about Magic List to generate positioning, onboarding, App Store, demo, risk and scope recommendations. The tool keeps the positioning and App Store polish, but parks new feature work because Magic List's current constraint is focus, not feature expansion. This proves the tool can help real products, not only toy examples.
 
 ## What makes it different
 
@@ -41,7 +41,7 @@ Codex built the project structure, interface, logic, documentation and submissio
 
 GPT-5.6 is used through the Studio workflow: the app generates a prompt, the builder asks GPT-5.6 for product analysis, then pastes the response back into Codex Potential Lab. The app analyzes whether the response contains positioning, privacy, roadmap, App Store/onboarding, demo and risk signals.
 
-The project includes two real GPT-5.6 traces: one for Codex Potential Lab itself and one for Magic List. The first trace shaped the readiness and judge-simulation features. The second trace strengthens the Magic List proof case with positioning and roadmap recommendations.
+The project includes two real GPT-5.6 traces: one for Codex Potential Lab itself and one for Magic List. The first trace shaped the readiness and judge-simulation features. The second trace strengthens the Magic List proof case with positioning and scope recommendations.
 
 ## Links to complete
 

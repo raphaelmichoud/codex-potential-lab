@@ -20,7 +20,7 @@ The project includes Magic List as a real-world proof case. Magic List already e
 
 After a real GPT-5.6 critique, the app was extended with a Submission Readiness Score, Build Gap Finder, and Judge Simulation. This turns the project from a submission text generator into a validation cockpit.
 
-A second real GPT-5.6 response is included for Magic List. It recommends positioning Magic List around mental clarity and privacy, then proposes Brain Dump Mode, Daily Focus, Completion History, Natural-language Quick Add, and a Magic Capture Widget. That response is used as proof that Codex Potential Lab can improve a real product's roadmap and story without claiming to have created the original app.
+A second real GPT-5.6 response is included for Magic List. It recommends positioning Magic List around mental clarity and privacy, then proposes Brain Dump Mode, Daily Focus, Completion History, Natural-language Quick Add, and a Magic Capture Widget. Codex Potential Lab then filters that output through real constraints: keep positioning and App Store/onboarding polish, but park new feature work for now. That response is used as proof that Codex Potential Lab can improve a real product's strategy and story without claiming to have created the original app.
 
 ## Inspiration
 
@@ -38,7 +38,7 @@ The app includes a GPT-5.6 Studio. It creates a structured prompt, lets the buil
 
 A real GPT-5.6 response was used to improve the project. It recommended making validation the core value, not text generation. That feedback directly led to the Submission Readiness Score, Build Gap Finder, and Judge Simulation.
 
-A real GPT-5.6 response was also used for the Magic List case study. Codex Potential Lab loads that response, analyzes it, and turns it into evidence for positioning, roadmap, onboarding, demo story, and risks.
+A real GPT-5.6 response was also used for the Magic List case study. Codex Potential Lab loads that response, analyzes it, and turns it into evidence for positioning, onboarding, demo story, risks, and scope decisions.
 
 ## Challenges
 

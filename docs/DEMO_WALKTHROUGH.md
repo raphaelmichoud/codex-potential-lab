@@ -44,6 +44,12 @@ Mention:
 
 For Magic List, GPT-5.6 recommends positioning the app as "The private to-do list that lets you think before you organize."
 
+Then show **Scope Decision** in Quality.
+
+Say:
+
+The important part is that the tool does not blindly convert GPT suggestions into a roadmap. It keeps positioning and App Store polish, while parking new features because Magic List should stay focused.
+
 Then open **Quality** and show the readiness panels.
 
 Say:

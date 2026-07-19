@@ -95,6 +95,8 @@ The real GPT-5.6 response in `docs/GPT56_CODEX_POTENTIAL_LAB_RESPONSE.md` recomm
 
 The real GPT-5.6 response in `docs/GPT56_MAGIC_LIST_RESPONSE.md` is used as the Magic List proof case. It positions Magic List around mental clarity and privacy, recommends Brain Dump Mode, Daily Focus, Completion History, Natural-language Quick Add, and a Magic Capture Widget, and reinforces that Magic List is evidence for Codex Potential Lab rather than a project originally created by it.
 
+Those feature ideas are deliberately filtered through scope constraints. Codex Potential Lab keeps the positioning and App Store/onboarding polish, but parks new Magic List feature work for now. This is the point of the tool: AI suggestions become decisions, not automatic scope creep.
+
 ## Recommended Devpost Category
 
 Developer Tools.

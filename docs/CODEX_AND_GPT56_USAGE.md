@@ -67,6 +67,7 @@ Implemented from this critique:
 
 - the Magic List button now loads the real GPT-5.6 response instead of a synthetic sample;
 - the GPT-5.6 Studio can analyze that response directly;
+- the Scope Decision panel keeps positioning and App Store/onboarding polish, but parks new feature work;
 - docs now distinguish between the Codex Potential Lab critique and the Magic List proof-case critique.
 
 ## Evidence to add before final submission
