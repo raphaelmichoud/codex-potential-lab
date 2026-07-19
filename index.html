@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codex Potential Lab</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="side-rail" aria-label="Navigation principale">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <div>
+            <p class="eyebrow">Projet Codex</p>
+            <h1>Potential Lab</h1>
+          </div>
+        </div>
+
+        <nav class="section-tabs" aria-label="Sections">
+          <button class="tab-button active" type="button" data-target="mission" title="Mission">
+            <span aria-hidden="true">01</span>
+            Mission
+          </button>
+          <button class="tab-button" type="button" data-target="architecture" title="Architecture">
+            <span aria-hidden="true">02</span>
+            Architecture
+          </button>
+          <button class="tab-button" type="button" data-target="gpt" title="GPT-5.6">
+            <span aria-hidden="true">03</span>
+            GPT-5.6
+          </button>
+          <button class="tab-button" type="button" data-target="quality" title="Qualite">
+            <span aria-hidden="true">04</span>
+            Qualite
+          </button>
+          <button class="tab-button" type="button" data-target="submission" title="Soumission">
+            <span aria-hidden="true">05</span>
+            Soumission
+          </button>
+        </nav>
+
+        <div class="side-stats" aria-label="Synthese du projet">
+          <div>
+            <span class="metric-value" id="scoreValue">92</span>
+            <span class="metric-label">score</span>
+          </div>
+          <div>
+            <span class="metric-value" id="taskValue">18</span>
+            <span class="metric-label">actions</span>
+          </div>
+          <div>
+            <span class="metric-value" id="riskValue">4</span>
+            <span class="metric-label">risques</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <section class="control-band" aria-label="Brief et parametres">
+          <div class="brief-panel">
+            <label for="projectBrief">Brief</label>
+            <textarea id="projectBrief" rows="5">Creer un assistant de candidature qui aide les fondateurs, etudiants et makers a transformer une idee en prototype, dossier de soumission et demo narrative en une seule session Codex.</textarea>
+          </div>
+
+          <div class="field-grid">
+            <label>
+              Categorie
+              <select id="categorySelect">
+                <option>Developer tools</option>
+                <option>Work and productivity</option>
+                <option>Education</option>
+                <option>Apps for your life</option>
+              </select>
+            </label>
+            <label>
+              Delai
+              <select id="deadlineSelect">
+                <option value="48">48 heures</option>
+                <option value="24">24 heures</option>
+                <option value="72">72 heures</option>
+                <option value="168">1 semaine</option>
+              </select>
+            </label>
+            <label>
+              Ambition
+              <input id="ambitionRange" type="range" min="1" max="5" value="4">
+            </label>
+          </div>
+
+          <div class="action-row">
+            <button class="primary-action" type="button" id="generateBtn">
+              <span aria-hidden="true">◆</span>
+              Generer le plan
+            </button>
+            <button type="button" id="demoBtn">
+              <span aria-hidden="true">▶</span>
+              Mode demo
+            </button>
+            <button type="button" id="exportBtn">
+              <span aria-hidden="true">⇩</span>
+              Exporter
+            </button>
+            <button type="button" id="magicBtn">
+              <span aria-hidden="true">✦</span>
+              Magic List
+            </button>
+          </div>
+        </section>
+
+        <section class="visual-band" aria-label="Tableau de bord">
+          <div class="visual-copy">
+            <p class="eyebrow">Prototype local</p>
+            <h2 id="projectTitle">Codex Submission Forge</h2>
+            <p id="projectPitch">Un cockpit qui transforme un brief brut en plan de construction, surfaces produit, preuves de qualite et candidature prete a soumettre.</p>
+          </div>
+          <img src="./assets/codex-workspace.png" alt="Illustration d'un espace de travail logiciel avec editeur, tests et carte d'architecture.">
+        </section>
+
+        <section class="view-stack">
+          <article class="view-section active" id="mission" aria-labelledby="missionTitle">
+            <div class="section-heading">
+              <p class="eyebrow">Mission</p>
+              <h2 id="missionTitle">Du brief au plan executif</h2>
+            </div>
+            <div class="mission-layout">
+              <div class="outcome-panel">
+                <h3>Resultat cible</h3>
+                <p id="outcomeText"></p>
+              </div>
+              <div class="timeline" id="timelineList" aria-label="Chronologie"></div>
+            </div>
+          </article>
+
+          <article class="view-section" id="architecture" aria-labelledby="architectureTitle">
+            <div class="section-heading">
+              <p class="eyebrow">Architecture</p>
+              <h2 id="architectureTitle">Surfaces, donnees et flux</h2>
+            </div>
+            <div class="architecture-map" id="architectureMap" aria-label="Carte d'architecture"></div>
+          </article>
+
+          <article class="view-section" id="gpt" aria-labelledby="gptTitle">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">GPT-5.6 Studio</p>
+                <h2 id="gptTitle">Prompt, reponse et preuves</h2>
+              </div>
+              <div class="evidence-bar" aria-label="Statut de preuve GPT-5.6">
+                <span id="gptEvidenceScore">0</span>
+                <span>signaux</span>
+              </div>
+            </div>
+            <div class="gpt-layout">
+              <div class="gpt-panel">
+                <label for="gptPrompt">Prompt a envoyer a GPT-5.6</label>
+                <textarea id="gptPrompt" rows="14" spellcheck="false"></textarea>
+                <div class="mini-actions">
+                  <button type="button" id="copyPromptBtn">
+                    <span aria-hidden="true">⧉</span>
+                    Copier
+                  </button>
+                  <button type="button" id="sampleGptBtn">
+                    <span aria-hidden="true">◌</span>
+                    Exemple GPT
+                  </button>
+                </div>
+              </div>
+              <div class="gpt-panel">
+                <label for="gptResponse">Reponse GPT-5.6 a analyser</label>
+                <textarea id="gptResponse" rows="14" placeholder="Collez ici une vraie reponse GPT-5.6 ou chargez l'exemple Magic List." spellcheck="false"></textarea>
+                <div class="mini-actions">
+                  <button class="primary-action" type="button" id="analyzeGptBtn">
+                    <span aria-hidden="true">◆</span>
+                    Analyser
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="insight-grid" id="gptInsights" aria-label="Analyse GPT-5.6"></div>
+          </article>
+
+          <article class="view-section" id="quality" aria-labelledby="qualityTitle">
+            <div class="section-heading">
+              <p class="eyebrow">Qualite</p>
+              <h2 id="qualityTitle">Taches, tests et risques</h2>
+            </div>
+            <div class="quality-grid">
+              <div>
+                <h3>Tableau d'execution</h3>
+                <div class="task-board" id="taskBoard"></div>
+              </div>
+              <div>
+                <h3>Garde-fous</h3>
+                <div class="risk-list" id="riskList"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="view-section" id="submission" aria-labelledby="submissionTitle">
+            <div class="section-heading">
+              <p class="eyebrow">Soumission</p>
+              <h2 id="submissionTitle">Texte pret a coller</h2>
+            </div>
+            <div class="submission-layout">
+              <textarea id="submissionText" rows="18" aria-label="Texte de soumission"></textarea>
+              <div class="checklist-panel">
+                <h3>Pieces a joindre</h3>
+                <ul id="checklist"></ul>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

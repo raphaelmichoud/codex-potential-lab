@@ -1,0 +1,21 @@
+{
+  "app_name": "Magic List: Simple To-Do",
+  "source_url": "https://apps.apple.com/ch/app/magic-list-simple-to-do/id6759790577?l=fr-FR",
+  "category": "Productivity",
+  "platforms": ["iPhone", "iPad"],
+  "language": "English",
+  "size": "26.3 MB",
+  "minimum_os": "iOS 15.1 or later",
+  "public_positioning": "Simple and private to-do list app",
+  "public_claims": [
+    "No ads",
+    "No account",
+    "No tracking",
+    "3 lists free",
+    "Unlock unlimited lists with Premium",
+    "Premium is a one-time purchase",
+    "Data stays on device"
+  ],
+  "privacy_summary": "The App Store listing says the developer does not collect data from this app.",
+  "notes": "Only product-relevant public facts are stored here. Personal seller contact details from the App Store listing are intentionally excluded."
+}
