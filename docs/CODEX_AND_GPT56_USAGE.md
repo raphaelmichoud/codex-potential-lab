@@ -35,3 +35,4 @@ The app does not store API keys or call the OpenAI API from the browser. Instead
 - Export the Markdown pack.
 - Include the Codex `/feedback` session ID.
 - Keep dated commits showing the project was created or meaningfully extended during the submission period.
+- Use `docs/GPT56_MAGIC_LIST_PROMPT.md` as the ready-to-copy prompt for the Magic List proof case.

@@ -32,3 +32,10 @@ Codex was used to create the app, project structure, documentation, Magic List c
 ## Category
 
 Developer Tools is the recommended category, because the project helps builders produce better products, demos and submissions.
+
+## Links
+
+- Repository: https://github.com/raphaelmichoud/codex-potential-lab
+- Demo: https://raphaelmichoud.github.io/codex-potential-lab/
+- Video: to add after recording
+- Codex `/feedback` session ID: to add before final submission

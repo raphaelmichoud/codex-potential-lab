@@ -1,80 +1,99 @@
 # Codex Potential Lab
 
-Codex Potential Lab est une application web locale qui montre comment Codex peut transformer une idee brute en projet presentable: brief, architecture, plan d'execution, risques, checklist, script de demo et texte de soumission.
+Codex Potential Lab is a Codex-built project cockpit for turning a rough idea or existing product into a clearer product plan, architecture, quality checklist, GPT-5.6 trace, demo story, and submission package.
 
-## Lancer le projet
+It is intentionally simple to run: open `index.html` in a browser. No install, no account, no server, no API key in the browser.
 
-Ouvrir `index.html` dans un navigateur moderne.
+## Demo
 
-Aucune installation n'est necessaire. Le projet utilise seulement HTML, CSS et JavaScript natif.
+Open `index.html`, then:
 
-## Ce que le projet demontre
+1. Edit the brief.
+2. Pick a category, deadline, and ambition level.
+3. Open **GPT-5.6 Studio**.
+4. Copy the generated prompt to GPT-5.6.
+5. Paste the GPT-5.6 response back into the app.
+6. Review the mission, architecture, quality plan, risks, and submission copy.
+7. Export the Markdown submission pack.
 
-- Cadrage d'un brief naturel en objectif produit.
-- Studio GPT-5.6: generation d'un prompt structure, collage d'une reponse GPT-5.6, analyse locale des signaux et trace exportable.
-- Generation interactive de surfaces produit, taches, risques et garde-fous.
-- Interface responsive, accessible et utilisable comme cockpit de preparation.
-- Export Markdown pour preparer une candidature Devpost ou un dossier interne.
-- Asset visuel cree pour le projet et integre localement.
-- Cas test Magic List a charger en un clic pour transformer une app existante en plan de croissance, ASO, onboarding et demo.
+The **Magic List** button loads a real-world proof case based on public App Store facts for Magic List: Simple To-Do.
 
-## Parcours de demo
+## Why It Exists
 
-1. Modifier le brief dans le panneau superieur.
-2. Choisir une categorie, un delai et un niveau d'ambition.
-3. Ouvrir GPT-5.6 Studio, copier le prompt, puis coller une vraie reponse GPT-5.6 ou charger l'exemple Magic List.
-4. Observer la mission, l'architecture, le tableau qualite, les signaux GPT-5.6 et le texte de soumission.
-5. Activer le mode demo pour presenter les sections automatiquement.
-6. Exporter le dossier Markdown.
+Many builders can create a prototype, but struggle to explain it clearly. Codex Potential Lab focuses on the missing layer between building and submitting:
 
-## Cas test Magic List
+- What is the product?
+- Why does it matter?
+- How does it work?
+- What should be built next?
+- What risks should be named?
+- How did Codex and GPT-5.6 contribute?
+- What should go into the final submission?
 
-Le bouton `Magic List` charge un brief base sur la fiche publique App Store de Magic List: Simple To-Do:
+## What It Demonstrates
 
-- app iPhone et iPad de productivite;
-- no ads;
-- no account;
-- no tracking;
-- 3 lists free;
-- Premium avec achat unique;
-- donnees conservees sur l'appareil.
+- Natural-language brief to product framing.
+- Generated mission, timeline, architecture, task board, and risk register.
+- GPT-5.6 Studio with prompt generation, pasted response analysis, and exportable evidence.
+- Real-world case study with Magic List.
+- Markdown export for Devpost or internal project reviews.
+- Local-first execution with no hidden cloud dependency.
+- A complete submission pack, not just a prototype.
 
-La source publique est documentee dans `data/magic-list-public-facts.json`.
+## Magic List Case Study
 
-## Structure
+Magic List was not built with Codex Potential Lab. It already existed before this project.
 
-- `index.html`: structure de l'application.
-- `styles.css`: design responsive.
-- `app.js`: logique de generation locale, export et mode demo.
-- `assets/codex-workspace.png`: visuel bitmap cree avec la competence imagegen de Codex.
-- `data/magic-list-public-facts.json`: faits publics utilises pour le cas test Magic List.
-- `docs/DEVPOST_SUBMISSION.md`: texte pret a adapter pour Devpost.
-- `docs/VIDEO_SCRIPT.md`: script de demo de moins de 3 minutes.
-- `docs/CODEX_AND_GPT56_USAGE.md`: trace narrative de l'usage Codex et GPT-5.6.
-- `docs/MAGIC_LIST_BEFORE_AFTER.md`: rapport avant/apres pour le cas test Magic List.
-- `docs/FINAL_CHECKLIST.md`: checklist finale avant soumission.
+It is used as a realistic test case to show how Codex Potential Lab can analyze an existing product and produce:
 
-## Notes de soumission
+- sharper positioning;
+- roadmap ideas;
+- App Store and onboarding recommendations;
+- a short demo story;
+- product and submission risks.
 
-Le projet est volontairement autonome pour faciliter l'evaluation. Pour une soumission Devpost, ajouter:
+Public facts used by the app live in `data/magic-list-public-facts.json`.
 
-- lien de depot;
-- video demo publique;
-- session ID Codex via `/feedback`;
-- trace GPT-5.6 reelle: prompt, reponse et decisions integrees;
-- capture ou demo en ligne;
-- licence si le depot est public.
+## Project Structure
 
-## Limite volontaire
+- `index.html`: app structure.
+- `styles.css`: responsive UI.
+- `app.js`: local generation, GPT-5.6 Studio, Magic List case, export, and demo mode.
+- `assets/codex-workspace.png`: generated visual asset integrated into the app.
+- `data/magic-list-public-facts.json`: public facts used for the Magic List case.
+- `SUBMISSION.md`: compact submission summary.
+- `docs/DEVPOST_SUBMISSION.md`: Devpost draft.
+- `docs/DEVPOST_FIELDS.md`: copy/paste Devpost fields.
+- `docs/VIDEO_SCRIPT.md`: under-3-minute video script.
+- `docs/DEMO_WALKTHROUGH.md`: screen-by-screen demo instructions.
+- `docs/CODEX_AND_GPT56_USAGE.md`: Codex and GPT-5.6 usage narrative.
+- `docs/MAGIC_LIST_BEFORE_AFTER.md`: before/after report for Magic List.
+- `docs/FINAL_CHECKLIST.md`: final submission checklist.
 
-L'application ne stocke aucune cle API et n'appelle pas directement l'API OpenAI depuis le navigateur. Le studio est concu pour un workflow sur: copier le prompt, interroger GPT-5.6 dans l'environnement autorise, coller la reponse, puis laisser Codex Potential Lab la transformer en decisions et dossier.
+## How Codex And GPT-5.6 Are Used
 
-## Preparation GitHub
+Codex created the project structure, interface, local app logic, documentation, Magic List case study, generated asset integration, GitHub-ready repository, and submission materials.
 
-Ce dossier est pret a devenir un depot GitHub. Avant publication, choisir:
+GPT-5.6 is represented through an explicit copy/paste workflow:
 
-- visibilite du depot: public ou prive;
-- licence: MIT, Apache-2.0, autre, ou aucune licence publique;
-- URL de demo optionnelle si le projet est heberge;
-- vraie session ID Codex obtenue avec `/feedback`;
-- vraie trace GPT-5.6 a coller dans le Studio.
+1. Codex Potential Lab generates a structured GPT-5.6 prompt.
+2. The builder sends that prompt to GPT-5.6 in an authorized environment.
+3. The builder pastes the response back into the app.
+4. Codex Potential Lab analyzes the response for product and submission signals.
+5. The result becomes part of the exportable submission pack.
+
+The app does not store API keys and does not call the OpenAI API directly from the browser.
+
+## Recommended Devpost Category
+
+Developer Tools.
+
+The project helps builders create better product plans, demos, and submissions.
+
+## Final Items Before Submission
+
+- Add a real GPT-5.6 response in the Studio.
+- Export the Markdown pack.
+- Record a public YouTube demo under 3 minutes.
+- Add the Codex `/feedback` session ID.
+- Submit the GitHub repo, demo link, video link, and submission text on Devpost.

@@ -13,6 +13,7 @@
 - [ ] Choose repository visibility: public or private.
 - [ ] Choose license if public.
 - [ ] Push the committed project to GitHub.
+- [ ] Add public demo URL if GitHub Pages is enabled.
 - [ ] If private, share repository access with required judging emails.
 - [ ] Add repository link to Devpost.
 
@@ -35,3 +36,8 @@
 - [ ] Add demo URL if hosted.
 - [ ] Add Codex `/feedback` session ID.
 - [ ] Submit before July 21, 2026 at 5:00 PM PT.
+
+## Links
+
+- Repository: https://github.com/raphaelmichoud/codex-potential-lab
+- Demo target: https://raphaelmichoud.github.io/codex-potential-lab/
