@@ -35,6 +35,7 @@ Many builders can create a prototype, but struggle to explain it clearly. Codex 
 - Natural-language brief to product framing.
 - Generated mission, timeline, architecture, task board, and risk register.
 - GPT-5.6 Studio with prompt generation, pasted response analysis, and exportable evidence.
+- Submission Readiness Score, Build Gap Finder, and Judge Simulation added after a real GPT-5.6 critique.
 - Real-world case study with Magic List.
 - Markdown export for Devpost or internal project reviews.
 - Local-first execution with no hidden cloud dependency.
@@ -67,6 +68,7 @@ Public facts used by the app live in `data/magic-list-public-facts.json`.
 - `docs/VIDEO_SCRIPT.md`: under-3-minute video script.
 - `docs/DEMO_WALKTHROUGH.md`: screen-by-screen demo instructions.
 - `docs/CODEX_AND_GPT56_USAGE.md`: Codex and GPT-5.6 usage narrative.
+- `docs/GPT56_CODEX_POTENTIAL_LAB_RESPONSE.md`: real GPT-5.6 critique used to improve the project.
 - `docs/MAGIC_LIST_BEFORE_AFTER.md`: before/after report for Magic List.
 - `docs/FINAL_CHECKLIST.md`: final submission checklist.
 
@@ -84,6 +86,12 @@ GPT-5.6 is represented through an explicit copy/paste workflow:
 
 The app does not store API keys and does not call the OpenAI API directly from the browser.
 
+The real GPT-5.6 response in `docs/GPT56_CODEX_POTENTIAL_LAB_RESPONSE.md` recommended shifting the product away from simple text generation and toward validation. That directly informed three added features:
+
+- Submission Readiness Score;
+- Build Gap Finder;
+- Judge Simulation.
+
 ## Recommended Devpost Category
 
 Developer Tools.
@@ -92,7 +100,7 @@ The project helps builders create better product plans, demos, and submissions.
 
 ## Final Items Before Submission
 
-- Add a real GPT-5.6 response in the Studio.
+- Paste the real GPT-5.6 response in the Studio during the demo.
 - Export the Markdown pack.
 - Record a public YouTube demo under 3 minutes.
 - Add the Codex `/feedback` session ID.

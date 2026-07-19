@@ -29,10 +29,30 @@ The app does not store API keys or call the OpenAI API from the browser. Instead
 4. The app analyzes the response for product and submission signals.
 5. The result is included in the exportable submission pack.
 
+## Real GPT-5.6 Trace
+
+The file `docs/GPT56_CODEX_POTENTIAL_LAB_RESPONSE.md` contains the real GPT-5.6 response provided for the default Codex Potential Lab brief. This response critiques Codex Potential Lab itself, not Magic List.
+
+Key recommendations from that response:
+
+- make the product a submission copilot, not just a text generator;
+- add a Submission Readiness Score;
+- add a Build Gap Finder;
+- add a Demo Generator or guided demo flow;
+- add a Judge Simulation;
+- make every score explainable.
+
+Implemented from this critique:
+
+- Submission Readiness Score;
+- Build Gap Finder;
+- Judge Simulation;
+- expanded Markdown export that includes these sections.
+
 ## Evidence to add before final submission
 
-- Paste a real GPT-5.6 response into the Studio.
-- Export the Markdown pack.
+- Paste the real GPT-5.6 response into the Studio during the video.
+- Export the Markdown pack after analysis.
 - Include the Codex `/feedback` session ID.
 - Keep dated commits showing the project was created or meaningfully extended during the submission period.
 - Use `docs/GPT56_MAGIC_LIST_PROMPT.md` as the ready-to-copy prompt for the Magic List proof case.

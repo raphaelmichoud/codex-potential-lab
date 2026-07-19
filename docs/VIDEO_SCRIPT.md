@@ -21,14 +21,14 @@ For the demo, I use Magic List as a real-world test case. Magic List already exi
 Open the GPT-5.6 Studio tab. Show the generated prompt, then show the pasted response or sample response.
 
 Voiceover:
-The Studio creates a structured prompt for GPT-5.6. After asking GPT-5.6, I paste the response back into the app. Codex Potential Lab then checks whether the answer contains the signals a strong product submission needs: positioning, privacy, roadmap, App Store onboarding, demo story and risks.
+The Studio creates a structured prompt for GPT-5.6. After asking GPT-5.6, I paste the response back into the app. Codex Potential Lab then checks whether the answer contains the signals a strong product submission needs. GPT-5.6 also recommended making validation the core value, not just text generation, so I added a Submission Readiness Score, Build Gap Finder, and Judge Simulation.
 
 ## 1:05 - 1:35
 
 Show Mission, Architecture and Quality tabs.
 
 Voiceover:
-The app turns those signals into a mission, architecture map, task board and risk register. The goal is to make the project legible for builders, collaborators and judges.
+The app turns those signals into a mission, architecture map, task board, risk register, readiness score and judge-style critique. The goal is to make the project legible for builders, collaborators and judges.
 
 ## 1:35 - 2:05
 

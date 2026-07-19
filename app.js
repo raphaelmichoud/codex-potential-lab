@@ -100,6 +100,9 @@ const elements = {
   architecture: document.querySelector("#architectureMap"),
   tasks: document.querySelector("#taskBoard"),
   risks: document.querySelector("#riskList"),
+  readiness: document.querySelector("#readinessPanel"),
+  gaps: document.querySelector("#gapList"),
+  judge: document.querySelector("#judgePanel"),
   checklist: document.querySelector("#checklist"),
   submission: document.querySelector("#submissionText"),
   gptPrompt: document.querySelector("#gptPrompt"),
@@ -186,7 +189,8 @@ function buildModel() {
   const keywords = extractKeywords(state.brief);
   const scope = state.deadline <= 24 ? "compact" : state.deadline <= 48 ? "soutenu" : "etendu";
   const gptAnalysis = analyzeGptResponse(state.gptResponse);
-  const score = Math.min(99, 76 + state.ambition * 3 + preset.scoreBoost + Math.min(keywords.length, 5) + Math.min(gptAnalysis.score, 4));
+  const readiness = createReadinessSystem(profile, gptAnalysis, state.ambition, scope);
+  const score = readiness.total;
 
   return {
     preset,
@@ -196,11 +200,105 @@ function buildModel() {
     scope,
     score,
     gptAnalysis,
+    readiness,
     tasks: createTasks(scope, preset, profile, gptAnalysis),
     architecture: createArchitecture(preset, keywords, profile),
     submission: createSubmission(preset, summary, scope, score, profile, gptAnalysis),
     gptPrompt: createGptPrompt(preset, summary, scope, profile)
   };
+}
+
+function clampScore(value) {
+  return Math.max(0, Math.min(99, Math.round(value)));
+}
+
+function createReadinessSystem(profile, gptAnalysis, ambition, scope) {
+  const modelBoost = Math.min(gptAnalysis.score, 6) * 3;
+  const ambitionBoost = ambition * 3;
+  const scopePenalty = scope === "compact" ? 4 : scope === "etendu" ? -1 : 0;
+  const magicBoost = profile.kind === "magic-list" ? 2 : 0;
+
+  const dimensions = [
+    {
+      label: "Prototype",
+      value: clampScore(62 + ambitionBoost + modelBoost + magicBoost),
+      note: "Flux testable, interface locale et parcours demo."
+    },
+    {
+      label: "Story",
+      value: clampScore(66 + ambitionBoost + modelBoost),
+      note: "Pitch, positionnement et narration de soumission."
+    },
+    {
+      label: "Demo",
+      value: clampScore(56 + ambitionBoost + modelBoost - scopePenalty),
+      note: "Script video, sequence ecran et export Markdown."
+    },
+    {
+      label: "Evidence",
+      value: clampScore(52 + modelBoost * 2 + magicBoost),
+      note: "Trace GPT-5.6, faits verifies et decisions explicites."
+    }
+  ];
+
+  const total = clampScore(dimensions.reduce((sum, item) => sum + item.value, 0) / dimensions.length);
+  const gaps = createBuildGaps(dimensions, gptAnalysis, profile);
+  const judge = createJudgeSimulation(dimensions, gptAnalysis, total);
+
+  return { total, dimensions, gaps, judge };
+}
+
+function createBuildGaps(dimensions, gptAnalysis, profile) {
+  const gaps = [
+    {
+      status: dimensions[2].value >= 82 ? "ready" : "warning",
+      title: "Demo convaincante",
+      body: dimensions[2].value >= 82 ? "La sequence est proche d'un parcours jury complet." : "Ajouter une video courte montrant probleme, action, resultat et export."
+    },
+    {
+      status: gptAnalysis.score >= 5 ? "ready" : "warning",
+      title: "Trace GPT-5.6",
+      body: gptAnalysis.score >= 5 ? "La reponse modele couvre assez de signaux pour etre citee." : "Coller une vraie reponse GPT-5.6 et verifier les signaux detectes."
+    },
+    {
+      status: profile.kind === "magic-list" ? "ready" : "warning",
+      title: "Cas reel",
+      body: profile.kind === "magic-list" ? "Magic List ancre la demo dans un produit public." : "Charger Magic List pour montrer un cas d'usage concret."
+    },
+    {
+      status: dimensions[3].value >= 80 ? "ready" : "warning",
+      title: "Preuves jugeables",
+      body: dimensions[3].value >= 80 ? "Les faits, hypotheses et recommandations sont separes." : "Expliciter ce qui est verifie, suppose et recommande."
+    }
+  ];
+
+  return gaps;
+}
+
+function createJudgeSimulation(dimensions, gptAnalysis, total) {
+  const byLabel = Object.fromEntries(dimensions.map((item) => [item.label, item.value]));
+  return [
+    {
+      label: "Innovation",
+      value: clampScore((byLabel.Story + byLabel.Evidence) / 2 + 2),
+      note: "Meta-outil qui rend visible tout le cycle Codex."
+    },
+    {
+      label: "Execution",
+      value: clampScore((byLabel.Prototype + byLabel.Evidence) / 2),
+      note: "App locale, docs, repo, demo et export."
+    },
+    {
+      label: "Story",
+      value: byLabel.Story,
+      note: "Promesse: du concept a une candidature soumettable."
+    },
+    {
+      label: "Demo",
+      value: byLabel.Demo,
+      note: total >= 86 && gptAnalysis.score >= 5 ? "Ready to submit." : "Montrer clairement le probleme initial et la correction."
+    }
+  ];
 }
 
 function createTasks(scope, preset, profile, gptAnalysis) {
@@ -430,9 +528,42 @@ function render() {
   renderArchitecture(model.architecture);
   renderTasks(model.tasks);
   renderRisks();
+  renderReadiness(model.readiness);
   renderChecklist();
   renderGptInsights(model.gptAnalysis);
   saveState();
+}
+
+function renderReadiness(readiness) {
+  elements.readiness.innerHTML = readiness.dimensions
+    .map((item) => `
+      <div class="score-row">
+        <span>${escapeHtml(item.label)}</span>
+        <div class="score-track" aria-hidden="true">
+          <div class="score-fill" style="width: ${item.value}%"></div>
+        </div>
+        <strong>${item.value}</strong>
+      </div>
+    `)
+    .join("");
+
+  elements.gaps.innerHTML = readiness.gaps
+    .map((item) => `
+      <div class="gap-item ${escapeHtml(item.status)}">
+        <strong>${escapeHtml(item.title)}</strong>
+        <p>${escapeHtml(item.body)}</p>
+      </div>
+    `)
+    .join("");
+
+  elements.judge.innerHTML = readiness.judge
+    .map((item) => `
+      <div class="judge-item">
+        <strong>${escapeHtml(item.label)} ${item.value}/99</strong>
+        <p>${escapeHtml(item.note)}</p>
+      </div>
+    `)
+    .join("");
 }
 
 function renderTimeline() {
@@ -538,6 +669,20 @@ ${state.gptResponse.trim() || "A completer avec une vraie reponse GPT-5.6."}
 ## Analyse GPT-5.6
 
 ${model.gptAnalysis.cards.map((card) => `- ${card.title}: ${card.body}`).join("\n")}
+
+## Submission Readiness Score
+
+Score total: ${model.readiness.total}/99
+
+${model.readiness.dimensions.map((item) => `- ${item.label}: ${item.value}/99 - ${item.note}`).join("\n")}
+
+## Build Gap Finder
+
+${model.readiness.gaps.map((item) => `- ${item.title}: ${item.body}`).join("\n")}
+
+## Judge Simulation
+
+${model.readiness.judge.map((item) => `- ${item.label}: ${item.value}/99 - ${item.note}`).join("\n")}
 
 ## Architecture
 

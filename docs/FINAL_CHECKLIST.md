@@ -6,6 +6,7 @@
 - [ ] Click Magic List and verify the case loads.
 - [ ] Open GPT-5.6 Studio.
 - [ ] Replace the sample GPT response with a real GPT-5.6 response.
+- [ ] Show Submission Readiness Score, Build Gap Finder, and Judge Simulation.
 - [ ] Export the Markdown pack.
 
 ## Repository

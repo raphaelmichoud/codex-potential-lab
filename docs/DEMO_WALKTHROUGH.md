@@ -40,13 +40,19 @@ Say:
 
 After pasting a GPT-5.6 response, the app checks whether it contains the signals a strong project story needs: positioning, privacy, roadmap, onboarding, demo, and risks.
 
+Then open **Quality** and show the readiness panels.
+
+Say:
+
+The GPT-5.6 critique pushed the app toward validation. I added a Submission Readiness Score, Build Gap Finder, and Judge Simulation so the user sees what is missing before submission.
+
 ### 4. Show Mission And Architecture
 
 Open **Mission** and **Architecture**.
 
 Say:
 
-Codex Potential Lab turns the brief and model response into an execution path and architecture map.
+Codex Potential Lab turns the brief and model response into an execution path, architecture map, readiness score, and judge-style critique.
 
 ### 5. Show Quality And Submission
 
@@ -54,7 +60,7 @@ Open **Quality** and **Submission**.
 
 Say:
 
-The app then builds a quality checklist, risk register, and submission copy that can be exported as Markdown.
+The app then builds a quality checklist, risk register, readiness score, gap finder, judge simulation, and submission copy that can be exported as Markdown.
 
 ### 6. Close With The Repository
 

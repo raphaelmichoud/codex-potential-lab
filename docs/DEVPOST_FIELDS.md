@@ -18,6 +18,8 @@ Codex Potential Lab helps builders go from a rough idea to a credible submission
 
 The project includes Magic List as a real-world proof case. Magic List already existed before this project. It is used to show how Codex Potential Lab can analyze an existing App Store product and produce positioning, roadmap, onboarding, App Store, demo, and risk recommendations.
 
+After a real GPT-5.6 critique, the app was extended with a Submission Readiness Score, Build Gap Finder, and Judge Simulation. This turns the project from a submission text generator into a validation cockpit.
+
 ## Inspiration
 
 Codex can do more than help with individual code changes. It can help shape the full arc of a project: product framing, implementation, quality, documentation, demo narrative, and final submission. Codex Potential Lab was built to make that end-to-end workflow visible.
@@ -32,7 +34,7 @@ The generated visual asset was created with Codex's image generation workflow an
 
 The app includes a GPT-5.6 Studio. It creates a structured prompt, lets the builder paste a real GPT-5.6 response, analyzes the response for product signals, and includes the result in the exportable submission pack.
 
-Before final submission, replace the sample response with a real GPT-5.6 response and export the final Markdown pack.
+A real GPT-5.6 response was used to improve the project. It recommended making validation the core value, not text generation. That feedback directly led to the Submission Readiness Score, Build Gap Finder, and Judge Simulation.
 
 ## Challenges
 
@@ -42,13 +44,13 @@ The main challenge was building a project that demonstrates Codex's broader pote
 
 - Built a complete local app from a blank workspace.
 - Added a GPT-5.6 evidence workflow.
+- Used GPT-5.6 critique to add readiness scoring, gap detection, and judge simulation.
 - Added a real-world Magic List case study.
 - Created README, Devpost draft, video script, walkthrough, and checklist.
 - Published a public GitHub repository.
 
 ## What Is Next
 
-- Add a real GPT-5.6 trace.
 - Record the demo video.
 - Add optional hosted demo link.
 - Expand the app to compare multiple products or export richer reports.
