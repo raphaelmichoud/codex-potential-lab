@@ -66,6 +66,7 @@ Public facts used by the app live in `data/magic-list-public-facts.json`.
 - `docs/DEVPOST_SUBMISSION.md`: Devpost draft.
 - `docs/DEVPOST_FIELDS.md`: copy/paste Devpost fields.
 - `docs/VIDEO_SCRIPT.md`: under-3-minute video script.
+- `docs/VIDEO_VOICEOVER_90S.md`: short English voiceover for the final submission video.
 - `docs/DEMO_WALKTHROUGH.md`: screen-by-screen demo instructions.
 - `docs/CODEX_AND_GPT56_USAGE.md`: Codex and GPT-5.6 usage narrative.
 - `docs/GPT56_CODEX_POTENTIAL_LAB_RESPONSE.md`: real GPT-5.6 critique used to improve the project.

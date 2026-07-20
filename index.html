@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,11 +8,11 @@
   </head>
   <body>
     <div class="app-shell">
-      <aside class="side-rail" aria-label="Navigation principale">
+      <aside class="side-rail" aria-label="Main navigation">
         <div class="brand-lockup">
           <span class="brand-mark" aria-hidden="true">C</span>
           <div>
-            <p class="eyebrow">Projet Codex</p>
+            <p class="eyebrow">Codex project</p>
             <h1>Potential Lab</h1>
           </div>
         </div>
@@ -30,17 +30,17 @@
             <span aria-hidden="true">03</span>
             GPT-5.6
           </button>
-          <button class="tab-button" type="button" data-target="quality" title="Qualite">
+          <button class="tab-button" type="button" data-target="quality" title="Quality">
             <span aria-hidden="true">04</span>
-            Qualite
+            Quality
           </button>
-          <button class="tab-button" type="button" data-target="submission" title="Soumission">
+          <button class="tab-button" type="button" data-target="submission" title="Submission">
             <span aria-hidden="true">05</span>
-            Soumission
+            Submission
           </button>
         </nav>
 
-        <div class="side-stats" aria-label="Synthese du projet">
+        <div class="side-stats" aria-label="Project summary">
           <div>
             <span class="metric-value" id="scoreValue">92</span>
             <span class="metric-label">score</span>
@@ -51,21 +51,21 @@
           </div>
           <div>
             <span class="metric-value" id="riskValue">4</span>
-            <span class="metric-label">risques</span>
+            <span class="metric-label">risks</span>
           </div>
         </div>
       </aside>
 
       <main class="workspace">
-        <section class="control-band" aria-label="Brief et parametres">
+        <section class="control-band" aria-label="Brief and settings">
           <div class="brief-panel">
             <label for="projectBrief">Brief</label>
-            <textarea id="projectBrief" rows="5">Creer un assistant de candidature qui aide les fondateurs, etudiants et makers a transformer une idee en prototype, dossier de soumission et demo narrative en une seule session Codex.</textarea>
+            <textarea id="projectBrief" rows="5">Create a submission assistant that helps founders, students, and makers turn an idea into a prototype, submission package, and demo story in a single Codex session.</textarea>
           </div>
 
           <div class="field-grid">
             <label>
-              Categorie
+              Category
               <select id="categorySelect">
                 <option>Developer tools</option>
                 <option>Work and productivity</option>
@@ -74,12 +74,12 @@
               </select>
             </label>
             <label>
-              Delai
+              Deadline
               <select id="deadlineSelect">
-                <option value="48">48 heures</option>
-                <option value="24">24 heures</option>
-                <option value="72">72 heures</option>
-                <option value="168">1 semaine</option>
+                <option value="48">48 hours</option>
+                <option value="24">24 hours</option>
+                <option value="72">72 hours</option>
+                <option value="168">1 week</option>
               </select>
             </label>
             <label>
@@ -91,15 +91,15 @@
           <div class="action-row">
             <button class="primary-action" type="button" id="generateBtn">
               <span aria-hidden="true">◆</span>
-              Generer le plan
+              Generate plan
             </button>
             <button type="button" id="demoBtn">
               <span aria-hidden="true">▶</span>
-              Mode demo
+              Demo mode
             </button>
             <button type="button" id="exportBtn">
               <span aria-hidden="true">⇩</span>
-              Exporter
+              Export
             </button>
             <button type="button" id="magicBtn">
               <span aria-hidden="true">✦</span>
@@ -108,94 +108,94 @@
           </div>
         </section>
 
-        <section class="visual-band" aria-label="Tableau de bord">
+        <section class="visual-band" aria-label="Dashboard">
           <div class="visual-copy">
-            <p class="eyebrow">Prototype local</p>
+            <p class="eyebrow">Local prototype</p>
             <h2 id="projectTitle">Codex Submission Forge</h2>
-            <p id="projectPitch">Un cockpit qui transforme un brief brut en plan de construction, surfaces produit, preuves de qualite et candidature prete a soumettre.</p>
+            <p id="projectPitch">A cockpit that turns a rough brief into a build plan, product surfaces, quality evidence, and a submission-ready package.</p>
           </div>
-          <img src="./assets/codex-workspace.png" alt="Illustration d'un espace de travail logiciel avec editeur, tests et carte d'architecture.">
+          <img src="./assets/codex-workspace.png" alt="Illustration of a software workspace with editor, tests, and architecture map.">
         </section>
 
         <section class="view-stack">
           <article class="view-section active" id="mission" aria-labelledby="missionTitle">
             <div class="section-heading">
               <p class="eyebrow">Mission</p>
-              <h2 id="missionTitle">Du brief au plan executif</h2>
+              <h2 id="missionTitle">From brief to execution plan</h2>
             </div>
             <div class="mission-layout">
               <div class="outcome-panel">
-                <h3>Resultat cible</h3>
+                <h3>Target outcome</h3>
                 <p id="outcomeText"></p>
               </div>
-              <div class="timeline" id="timelineList" aria-label="Chronologie"></div>
+              <div class="timeline" id="timelineList" aria-label="Timeline"></div>
             </div>
           </article>
 
           <article class="view-section" id="architecture" aria-labelledby="architectureTitle">
             <div class="section-heading">
               <p class="eyebrow">Architecture</p>
-              <h2 id="architectureTitle">Surfaces, donnees et flux</h2>
+              <h2 id="architectureTitle">Surfaces, data, and flow</h2>
             </div>
-            <div class="architecture-map" id="architectureMap" aria-label="Carte d'architecture"></div>
+            <div class="architecture-map" id="architectureMap" aria-label="Architecture map"></div>
           </article>
 
           <article class="view-section" id="gpt" aria-labelledby="gptTitle">
             <div class="section-heading">
               <div>
                 <p class="eyebrow">GPT-5.6 Studio</p>
-                <h2 id="gptTitle">Prompt, reponse et preuves</h2>
+                <h2 id="gptTitle">Prompt, response, and evidence</h2>
               </div>
-              <div class="evidence-bar" aria-label="Statut de preuve GPT-5.6">
+              <div class="evidence-bar" aria-label="GPT-5.6 evidence status">
                 <span id="gptEvidenceScore">0</span>
-                <span>signaux</span>
+                <span>signals</span>
               </div>
             </div>
             <div class="gpt-layout">
               <div class="gpt-panel">
-                <label for="gptPrompt">Prompt a envoyer a GPT-5.6</label>
+                <label for="gptPrompt">Prompt to send to GPT-5.6</label>
                 <textarea id="gptPrompt" rows="14" spellcheck="false"></textarea>
                 <div class="mini-actions">
                   <button type="button" id="copyPromptBtn">
                     <span aria-hidden="true">⧉</span>
-                    Copier
+                    Copy
                   </button>
                   <button type="button" id="sampleGptBtn">
                     <span aria-hidden="true">◌</span>
-                    Exemple GPT
+                    GPT example
                   </button>
                 </div>
               </div>
               <div class="gpt-panel">
-                <label for="gptResponse">Reponse GPT-5.6 a analyser</label>
-                <textarea id="gptResponse" rows="14" placeholder="Collez ici une vraie reponse GPT-5.6 ou chargez l'exemple Magic List." spellcheck="false"></textarea>
+                <label for="gptResponse">GPT-5.6 response to analyze</label>
+                <textarea id="gptResponse" rows="14" placeholder="Paste a real GPT-5.6 response here or load the Magic List example." spellcheck="false"></textarea>
                 <div class="mini-actions">
                   <button class="primary-action" type="button" id="analyzeGptBtn">
                     <span aria-hidden="true">◆</span>
-                    Analyser
+                    Analyze
                   </button>
                 </div>
               </div>
             </div>
-            <div class="insight-grid" id="gptInsights" aria-label="Analyse GPT-5.6"></div>
+            <div class="insight-grid" id="gptInsights" aria-label="GPT-5.6 analysis"></div>
           </article>
 
           <article class="view-section" id="quality" aria-labelledby="qualityTitle">
             <div class="section-heading">
-              <p class="eyebrow">Qualite</p>
-              <h2 id="qualityTitle">Taches, tests et risques</h2>
+              <p class="eyebrow">Quality</p>
+              <h2 id="qualityTitle">Tasks, tests, and risks</h2>
             </div>
             <div class="quality-grid">
               <div>
-                <h3>Tableau d'execution</h3>
+                <h3>Execution board</h3>
                 <div class="task-board" id="taskBoard"></div>
               </div>
               <div>
-                <h3>Garde-fous</h3>
+                <h3>Guardrails</h3>
                 <div class="risk-list" id="riskList"></div>
               </div>
             </div>
-            <div class="readiness-system" aria-label="Score de soumission et simulation jury">
+            <div class="readiness-system" aria-label="Submission score and judge simulation">
               <section class="readiness-panel">
                 <h3>Submission Readiness Score</h3>
                 <div class="score-breakdown" id="readinessPanel"></div>
@@ -217,13 +217,13 @@
 
           <article class="view-section" id="submission" aria-labelledby="submissionTitle">
             <div class="section-heading">
-              <p class="eyebrow">Soumission</p>
-              <h2 id="submissionTitle">Texte pret a coller</h2>
+              <p class="eyebrow">Submission</p>
+              <h2 id="submissionTitle">Copy-ready submission text</h2>
             </div>
             <div class="submission-layout">
-              <textarea id="submissionText" rows="18" aria-label="Texte de soumission"></textarea>
+              <textarea id="submissionText" rows="18" aria-label="Submission text"></textarea>
               <div class="checklist-panel">
-                <h3>Pieces a joindre</h3>
+                <h3>Materials to attach</h3>
                 <ul id="checklist"></ul>
               </div>
             </div>

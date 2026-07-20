@@ -8,63 +8,65 @@ const state = {
   demoIndex: 0
 };
 
+const storageKey = "codexPotentialLabEn";
+
 const presets = {
   "Developer tools": {
     title: "Codex Submission Forge",
-    audience: "makers, equipes produit et developpeurs",
+    audience: "makers, product teams, and developers",
     scoreBoost: 4,
     surfaces: ["Brief engine", "Architecture map", "Quality cockpit", "Submission pack"]
   },
   "Work and productivity": {
     title: "Codex Workbench",
-    audience: "fondateurs, responsables operationnels et createurs independants",
+    audience: "founders, operators, and independent builders",
     scoreBoost: 2,
-    surfaces: ["Capture", "Priorisation", "Execution", "Compte rendu"]
+    surfaces: ["Capture", "Prioritization", "Execution", "Report"]
   },
   Education: {
     title: "Codex Learning Studio",
-    audience: "enseignants, etudiants et mentors",
+    audience: "teachers, students, and mentors",
     scoreBoost: 1,
-    surfaces: ["Diagnostic", "Parcours", "Exercices", "Evaluation"]
+    surfaces: ["Diagnostic", "Learning path", "Exercises", "Assessment"]
   },
   "Apps for your life": {
     title: "Codex Life Kit",
-    audience: "personnes qui veulent transformer une idee personnelle en outil concret",
+    audience: "people who want to turn a personal idea into a concrete tool",
     scoreBoost: 3,
-    surfaces: ["Intentions", "Routine", "Assistant", "Memoire locale"]
+    surfaces: ["Intentions", "Routine", "Assistant", "Local memory"]
   }
 };
 
 const magicListCase = {
   title: "Magic List: Simple To-Do",
-  sourceUrl: "https://apps.apple.com/ch/app/magic-list-simple-to-do/id6759790577?l=fr-FR",
+  sourceUrl: "https://apps.apple.com/ch/app/magic-list-simple-to-do/id6759790577?l=en",
   brief:
-    "Magic List: Simple To-Do est une app iPhone et iPad de productivite simple et privee. Elle met en avant: no ads, no account, no tracking, 3 lists free, Premium avec achat unique, et donnees qui restent sur l'appareil. Objectif: utiliser Codex Potential Lab pour trouver le positionnement, la roadmap, l'ASO, l'onboarding, la retention et une demo narrative qui tire le plein potentiel de Magic List.",
+    "Magic List: Simple To-Do is a simple and private productivity app for iPhone and iPad. It highlights: no ads, no account, no tracking, 3 free lists, Premium with a one-time purchase, and data that stays on device. Goal: use Codex Potential Lab to find the positioning, roadmap, ASO, onboarding, retention, and demo narrative that unlock the full potential of Magic List.",
   sampleGptResponse: "# Positioning\n\n## Most distinctive positioning\n\n### Verified facts\nMagic List is:\n- an iPhone and iPad productivity app,\n- a simple private to-do list,\n- with no ads,\n- no account,\n- no tracking,\n- data stored on device,\n- App Store privacy summary indicates that no data is collected,\n- three lists are free,\n- Premium unlocks unlimited lists with a one-time purchase.\n\n### Recommendation\n\nThe strongest positioning is **not** \"another minimalist to-do app.\"\n\nIt is:\n\n> **The private to-do list that lets you think before you organize.**\n\nOr even more simply:\n\n> **Capture. Forget. Continue.**\n\nThe differentiation comes from removing friction and preserving privacy rather than adding productivity features.\n\nThe core promise becomes:\n\n- no signup\n- no cloud dependency\n- no algorithm\n- no surveillance\n- no subscriptions\n- no unnecessary complexity\n\nThat creates a very clear contrast with feature-heavy productivity tools without needing to compare directly to any specific competitor.\n\n---\n\n# Feature bets\n\n## 1. Brain Dump Mode\n**Impact:** Very High  \n**Effort:** Low\n\nA dedicated screen for rapidly entering many items without switching context.\n\nExample:\n\n```\nBuy milk\nCall Emma\nFinish prototype\nRenew passport\n```\n\nTap Done → automatically creates separate tasks.\n\nThis reinforces the product's \"empty your head\" philosophy.\n\n---\n\n## 2. Daily Focus\n**Impact:** High  \n**Effort:** Medium\n\nInstead of showing every task, Magic List offers one optional daily focus list.\n\nExample:\n\n> Today:\n>\n> ✓ Finish proposal\n>\n> ✓ Dentist\n>\n> ✓ Buy batteries\n\nKeeps the app intentionally simple.\n\n---\n\n## 3. Completion History\n**Impact:** Medium-High  \n**Effort:** Medium\n\nCompleted tasks remain accessible in a lightweight archive.\n\nBenefits:\n\n- feeling of progress\n- accidental recovery\n- no complicated reporting\n\n---\n\n## 4. Natural-language Quick Add\n**Impact:** Medium  \n**Effort:** Medium\n\nExample:\n\n> \"Call Sarah tomorrow\"\n\ncreates:\n\n- task\n- optional due date\n\nwithout exposing users to complex scheduling interfaces.\n\n---\n\n## 5. Magic Capture Widget\n**Impact:** High  \n**Effort:** High\n\nOne tap from the Home Screen:\n\n→ type\n\n→ saved\n\n→ back to life.\n\nFast capture is consistent with the product philosophy.\n\n---\n\n# App Store and onboarding\n\n## Screenshot recommendations\n\nCurrent screenshots should answer one question:\n\n**Why this app instead of any other to-do app?**\n\nSuggested sequence:\n\n### Screenshot 1\n\nLarge headline:\n\n> **Simple by design.**\n\nSmall text:\n\n> Capture tasks in seconds.\n\n---\n\n### Screenshot 2\n\n> **Private.**\n\nIcons:\n\n✓ No account\n\n✓ No tracking\n\n✓ No ads\n\n---\n\n### Screenshot 3\n\n> **Your data stays on your device.**\n\nSimple illustration of local storage.\n\n---\n\n### Screenshot 4\n\n> **Buy once. Keep forever.**\n\nClearly explain:\n\n- three lists free\n- unlimited lists with Premium\n- one-time purchase\n\n---\n\n### Screenshot 5\n\nShow real usage.\n\nMorning.\n\nAfternoon.\n\nShopping.\n\nIdeas.\n\nPacking.\n\nDemonstrate versatility instead of features.\n\n---\n\n## Onboarding recommendations\n\nCurrent onboarding should be extremely short.\n\nSuggested flow:\n\n### Screen 1\n\n> Welcome.\n\nOne sentence:\n\n> Magic List helps you empty your mind.\n\n---\n\n### Screen 2\n\nType your first task immediately.\n\nNo tutorial.\n\nNo permissions.\n\nNo account.\n\n---\n\n### Screen 3\n\nExplain only after first success:\n\n> Your tasks stay on your device.\n\nDone.\n\n---\n\n# Demo story\n\n**Duration:** ~2 minutes 30 seconds\n\n---\n\n### 0:00\n\n\"I have five things in my head.\"\n\nOpen Magic List.\n\nRapidly enter:\n\n- Dentist\n- Call Alex\n- Buy coffee\n- Finish prototype\n- Book train\n\nDone.\n\n---\n\n### 0:30\n\nEverything is captured.\n\nMind is clear.\n\nNo login.\n\nNo loading.\n\nNo sync.\n\nNo distractions.\n\n---\n\n### 0:50\n\nCreate:\n\n- Shopping\n- Work\n- Weekend\n\nShow how naturally lists separate different contexts.\n\n---\n\n### 1:20\n\nShow Privacy.\n\nExplain:\n\n- no account\n- no tracking\n- data remains on device\n\nMention that the App Store privacy summary indicates no data is collected.\n\n---\n\n### 1:50\n\nUpgrade.\n\nExplain:\n\n- three lists free\n- unlimited lists\n- one-time purchase\n\nNo subscription.\n\n---\n\n### 2:15\n\nClose with:\n\n> \"Sometimes productivity isn't about doing more.\n>\n> It's about carrying less.\"\n\n---\n\n# Risks\n\n## Product risks\n\n### 1. Minimalism can appear \"too simple\"\n\nA potential user may conclude:\n\n> \"It doesn't do enough.\"\n\n### Recommendation\n\nMarket simplicity as a deliberate product philosophy rather than a lack of features.\n\n---\n\n### 2. Privacy may not feel tangible\n\nAlthough privacy is a major strength, users may not immediately perceive its value.\n\n### Recommendation\n\nMake privacy visible throughout the App Store page and onboarding.\n\n---\n\n### 3. Weak emotional differentiation\n\n\"Simple to-do list\" is descriptive but not memorable.\n\n### Recommendation\n\nLead with the emotional outcome:\n\n> Peace of mind.\n\nNot:\n\n> Task management.\n\n---\n\n## Submission risks (Codex Potential Lab)\n\n### Verified fact\n\nMagic List existed before Codex Potential Lab.\n\n### Recommendation\n\nNever imply that Codex Potential Lab created Magic List.\n\nInstead present Magic List as:\n\n> the real-world product used to validate Codex Potential Lab.\n\nThe story becomes:\n\n> \"Here is an existing application.\n>\n> We used Codex Potential Lab to improve its positioning, product strategy, roadmap, narrative, and submission quality.\"\n\nThat is a stronger and more credible proof case than claiming authorship.\n\n---\n\n# Verified facts\n\n- Magic List is an iPhone and iPad productivity app.\n- It is a simple private to-do list.\n- It has no ads.\n- It requires no account.\n- It performs no tracking.\n- Three lists are available for free.\n- Premium unlocks unlimited lists.\n- Premium is a one-time purchase.\n- Data stays on the device.\n- The App Store privacy summary states that data is not collected.\n- Magic List existed before Codex Potential Lab.\n- In this submission, Magic List serves as a proof case for Codex Potential Lab.\n- The Build Week category for Codex Potential Lab is Developer Tools.\n\n---\n\n# Assumptions\n\n- Magic List aims to compete primarily on simplicity and privacy rather than feature breadth.\n- The current onboarding can be redesigned.\n- The App Store assets can be updated.\n- Codex Potential Lab is intended to demonstrate how developer tooling can improve an existing product's product strategy, narrative, and execution rather than generate the original application.\n\n---\n\n# Recommendations\n\n1. Position Magic List around **mental clarity and privacy**, not feature count.\n2. Add lightweight capabilities that reinforce fast capture rather than expanding into a full productivity suite.\n3. Redesign the App Store page to communicate privacy, ownership (one-time purchase), and simplicity before features.\n4. Build the demo around a relatable human problem (\"too many things in my head\") instead of the interface.\n5. Present Magic List as **evidence** of Codex Potential Lab's value: a real application whose positioning, roadmap, product narrative, and submission materials became stronger through the developer tool, without suggesting that the tool originally built the app."
 };
 
 const templates = {
   timeline: [
-    ["00:00", "Cadrage", "Transformer le brief en objectif, audience, criteres de succes et perimetre realiste."],
-    ["00:12", "GPT-5.6", "Generer un prompt d'analyse, coller la reponse du modele et convertir ses signaux en decisions."],
-    ["00:28", "Architecture", "Identifier les surfaces, l'etat applicatif, les donnees et les points de verification."],
-    ["00:44", "Qualite", "Passer sur accessibilite, robustesse mobile, coherence visuelle et scenarios de demonstration."],
-    ["00:56", "Soumission", "Assembler pitch, README, video demo, checklist et preuves de creation avec Codex."]
+    ["00:00", "Framing", "Turn the brief into a goal, audience, success criteria, and realistic scope."],
+    ["00:12", "GPT-5.6", "Generate an analysis prompt, paste the model response, and convert its signals into decisions."],
+    ["00:28", "Architecture", "Identify product surfaces, app state, data, and verification points."],
+    ["00:44", "Quality", "Check accessibility, mobile robustness, visual coherence, and demo scenarios."],
+    ["00:56", "Submission", "Assemble the pitch, README, demo video, checklist, and Codex evidence."]
   ],
   risks: [
-    ["high", "Demo trop abstraite", "Inclure un parcours utilisateur concret et un resultat exportable."],
-    ["medium", "Perimetre trop large", "Limiter la version jury a un flux fort et complet de bout en bout."],
-    ["medium", "Preuves insuffisantes", "Ajouter README, captures, video publique et session ID Codex."],
-    ["low", "Dependances externes", "Garder une version locale autonome pour que les juges puissent tester vite."]
+    ["high", "Demo too abstract", "Include a concrete user journey and an exportable result."],
+    ["medium", "Scope too broad", "Limit the judging version to one strong end-to-end workflow."],
+    ["medium", "Insufficient evidence", "Add a README, screenshots, public video, and Codex session ID."],
+    ["low", "External dependencies", "Keep a standalone local version so judges can test quickly."]
   ],
   checklist: [
-    "Video YouTube publique de moins de 3 minutes",
-    "Depot public ou depot prive partage avec les juges",
-    "README avec lancement, decisions techniques et limites",
-    "Session ID Codex obtenu via /feedback",
-    "Trace GPT-5.6: prompt, reponse et decisions integrees",
-    "Texte de soumission relu et coherent avec la categorie",
-    "Demo testee sur mobile et desktop"
+    "Public YouTube video under 3 minutes",
+    "Public repo or private repo shared with the judges",
+    "README with launch steps, technical decisions, and limits",
+    "Codex Session ID obtained through /feedback",
+    "GPT-5.6 trace: prompt, response, and integrated decisions",
+    "Submission text reviewed and aligned with the category",
+    "Demo tested on mobile and desktop"
   ]
 };
 
@@ -117,7 +119,7 @@ function escapeHtml(value) {
 function summarizeBrief(brief) {
   const clean = brief.trim().replace(/\s+/g, " ");
   if (!clean) {
-    return "un projet Codex transforme en experience testable";
+    return "a Codex project turned into a testable experience";
   }
 
   const firstSentence = clean.split(/[.!?]/).find(Boolean) || clean;
@@ -125,7 +127,7 @@ function summarizeBrief(brief) {
 }
 
 function extractKeywords(brief) {
-  const stop = new Set(["avec", "pour", "dans", "une", "des", "les", "qui", "que", "sur", "est", "aux", "plus", "leur", "leurs", "cette", "creer", "projet"]);
+  const stop = new Set(["with", "for", "into", "from", "that", "this", "your", "their", "project", "create", "turn", "helps"]);
   return brief
     .toLowerCase()
     .normalize("NFD")
@@ -137,19 +139,19 @@ function extractKeywords(brief) {
 
 function detectProfile(brief) {
   const clean = brief.toLowerCase();
-  if (clean.includes("magic list") || clean.includes("no tracking") || clean.includes("premium avec achat unique")) {
+  if (clean.includes("magic list") || clean.includes("no tracking") || clean.includes("one-time purchase")) {
     return {
       kind: "magic-list",
       label: "Magic List",
       facts: [
-        "iPhone et iPad",
-        "productivite",
+        "iPhone and iPad",
+        "productivity",
         "no ads",
         "no account",
         "no tracking",
         "3 lists free",
-        "Premium avec achat unique",
-        "donnees sur l'appareil"
+        "Premium with a one-time purchase",
+        "data stored on device"
       ]
     };
   }
@@ -172,7 +174,7 @@ function buildModel() {
   const profile = detectProfile(state.brief);
   const summary = summarizeBrief(state.brief);
   const keywords = extractKeywords(state.brief);
-  const scope = state.deadline <= 24 ? "compact" : state.deadline <= 48 ? "soutenu" : "etendu";
+  const scope = state.deadline <= 24 ? "focused" : state.deadline <= 48 ? "standard" : "extended";
   const gptAnalysis = analyzeGptResponse(state.gptResponse);
   const readiness = createReadinessSystem(profile, gptAnalysis, state.ambition, scope);
   const score = readiness.total;
@@ -200,29 +202,29 @@ function clampScore(value) {
 function createReadinessSystem(profile, gptAnalysis, ambition, scope) {
   const modelBoost = Math.min(gptAnalysis.score, 6) * 3;
   const ambitionBoost = ambition * 3;
-  const scopePenalty = scope === "compact" ? 4 : scope === "etendu" ? -1 : 0;
+  const scopePenalty = scope === "focused" ? 4 : scope === "extended" ? -1 : 0;
   const magicBoost = profile.kind === "magic-list" ? 2 : 0;
 
   const dimensions = [
     {
       label: "Prototype",
       value: clampScore(62 + ambitionBoost + modelBoost + magicBoost),
-      note: "Flux testable, interface locale et parcours demo."
+      note: "Testable flow, local interface, and demo path."
     },
     {
       label: "Story",
       value: clampScore(66 + ambitionBoost + modelBoost),
-      note: "Pitch, positionnement et narration de soumission."
+      note: "Pitch, positioning, and submission narrative."
     },
     {
       label: "Demo",
       value: clampScore(56 + ambitionBoost + modelBoost - scopePenalty),
-      note: "Script video, sequence ecran et export Markdown."
+      note: "Video script, screen sequence, and Markdown export."
     },
     {
       label: "Evidence",
       value: clampScore(52 + modelBoost * 2 + magicBoost),
-      note: "Trace GPT-5.6, faits verifies et decisions explicites."
+      note: "GPT-5.6 trace, verified facts, and explicit decisions."
     }
   ];
 
@@ -250,12 +252,12 @@ function createScopeDecisions(profile) {
       {
         status: "park",
         title: "Park: feature roadmap",
-        body: "Brain Dump already maps to 'Vider ma tete'. Daily Focus, History, NLP and Widget stay out of scope for now."
+        body: "Brain Dump already maps to the current 'empty my head' flow. Daily Focus, History, NLP and Widget stay out of scope for now."
       },
       {
         status: "skip",
         title: "Avoid: scope creep",
-        body: "Do not add product features before the higher-priority voice site commands and August 1 reminder."
+        body: "Do not add product features before higher-priority work is complete."
       }
     ];
   }
@@ -278,23 +280,23 @@ function createBuildGaps(dimensions, gptAnalysis, profile) {
   const gaps = [
     {
       status: dimensions[2].value >= 82 ? "ready" : "warning",
-      title: "Demo convaincante",
-      body: dimensions[2].value >= 82 ? "La sequence est proche d'un parcours jury complet." : "Ajouter une video courte montrant probleme, action, resultat et export."
+      title: "Convincing demo",
+      body: dimensions[2].value >= 82 ? "The sequence is close to a complete judge-ready walkthrough." : "Add a short video showing problem, action, result, and export."
     },
     {
       status: gptAnalysis.score >= 5 ? "ready" : "warning",
       title: "Trace GPT-5.6",
-      body: gptAnalysis.score >= 5 ? "La reponse modele couvre assez de signaux pour etre citee." : "Coller une vraie reponse GPT-5.6 et verifier les signaux detectes."
+      body: gptAnalysis.score >= 5 ? "The model response covers enough signals to be cited." : "Paste a real GPT-5.6 response and verify the detected signals."
     },
     {
       status: profile.kind === "magic-list" ? "ready" : "warning",
-      title: "Cas reel",
-      body: profile.kind === "magic-list" ? "Magic List ancre la demo dans un produit public." : "Charger Magic List pour montrer un cas d'usage concret."
+      title: "Real product case",
+      body: profile.kind === "magic-list" ? "Magic List grounds the demo in a public product." : "Load Magic List to show a concrete use case."
     },
     {
       status: dimensions[3].value >= 80 ? "ready" : "warning",
-      title: "Preuves jugeables",
-      body: dimensions[3].value >= 80 ? "Les faits, hypotheses et recommandations sont separes." : "Expliciter ce qui est verifie, suppose et recommande."
+      title: "Judgeable evidence",
+      body: dimensions[3].value >= 80 ? "Facts, assumptions, and recommendations are separated." : "Clarify what is verified, assumed, and recommended."
     }
   ];
 
@@ -307,68 +309,68 @@ function createJudgeSimulation(dimensions, gptAnalysis, total) {
     {
       label: "Innovation",
       value: clampScore((byLabel.Story + byLabel.Evidence) / 2 + 2),
-      note: "Meta-outil qui rend visible tout le cycle Codex."
+      note: "A meta-tool that makes the full Codex cycle visible."
     },
     {
       label: "Execution",
       value: clampScore((byLabel.Prototype + byLabel.Evidence) / 2),
-      note: "App locale, docs, repo, demo et export."
+      note: "Local app, docs, repo, demo, and export."
     },
     {
       label: "Story",
       value: byLabel.Story,
-      note: "Promesse: du concept a une candidature soumettable."
+      note: "Promise: from concept to submit-ready project."
     },
     {
       label: "Demo",
       value: byLabel.Demo,
-      note: total >= 86 && gptAnalysis.score >= 5 ? "Ready to submit." : "Montrer clairement le probleme initial et la correction."
+      note: total >= 86 && gptAnalysis.score >= 5 ? "Ready to submit." : "Clearly show the initial problem and the improvement."
     }
   ];
 }
 
 function createTasks(scope, preset, profile, gptAnalysis) {
   const build = [
-    ["Experience principale", `Creer le flux ${preset.surfaces[0].toLowerCase()} vers ${preset.surfaces[2].toLowerCase()}.`],
-    ["Etat local", "Sauvegarder les parametres, le brief, la trace GPT-5.6 et les exports pour une demo reproductible."],
-    ["Responsive", "Verifier que les panneaux critiques restent lisibles sur mobile et desktop."]
+    ["Core experience", `Create the flow from ${preset.surfaces[0].toLowerCase()} to ${preset.surfaces[2].toLowerCase()}.`],
+    ["Local state", "Save settings, brief, GPT-5.6 trace, and exports for a reproducible demo."],
+    ["Responsive", "Verify that critical panels stay readable on mobile and desktop."]
   ];
   const validate = [
-    ["Parcours jury", "Tester une sequence complete de 90 secondes avec resultat exporte."],
-    ["Accessibilite", "Verifier labels, focus visible, contraste et navigation clavier de base."],
-    ["Robustesse", "Prevoir le brief vide, les textes longs, les categories changeantes et les reponses GPT incompletes."]
+    ["Judge path", "Test a complete 90-second sequence with an exported result."],
+    ["Accessibility", "Verify labels, visible focus, contrast, and basic keyboard navigation."],
+    ["Robustness", "Handle empty briefs, long text, changing categories, and incomplete GPT responses."]
   ];
   const submit = [
-    ["README", "Documenter l'objectif, le lancement local et les choix d'implementation."],
-    ["Video demo", "Structurer le script autour du probleme, de la magie Codex, de GPT-5.6 et du resultat."],
-    ["Devpost", "Preparer pitch, categorie, depot, session ID, trace GPT-5.6 et checklist finale."]
+    ["README", "Document the goal, local launch steps, and implementation choices."],
+    ["Demo video", "Structure the script around the problem, the Codex workflow, GPT-5.6, and the result."],
+    ["Devpost", "Prepare pitch, category, repo, session ID, GPT-5.6 trace, and final checklist."]
   ];
 
   if (profile.kind === "magic-list") {
-    build.push(["Positionnement Magic List", "Transformer privacy, simplicite et achat unique en promesse produit nette."]);
-    validate.push(["Verite App Store", "Ne garder que les faits publics verifies et isoler les hypotheses produit."]);
-    submit.push(["Plan croissance", "Exporter ASO, onboarding, demo et roadmap en dossier actionnable."]);
+    build.push(["Magic List positioning", "Turn privacy, simplicity, and one-time purchase into a clear product promise."]);
+    validate.push(["App Store truth", "Keep only verified public facts and isolate product assumptions."]);
+    submit.push(["Growth plan", "Export ASO, onboarding, demo, and roadmap into an actionable package."]);
   }
 
   if (gptAnalysis.score >= 4) {
-    build.push(["Synthese modele", "Convertir les meilleurs signaux GPT-5.6 en decisions de scope."]);
+    build.push(["Model synthesis", "Convert the strongest GPT-5.6 signals into scope decisions."]);
   }
 
-  if (scope === "etendu") {
-    build.push(["Mode demo", "Ajouter une navigation automatique pour presenter le projet sans friction."]);
-    validate.push(["Audit visuel", "Comparer les etats principaux apres generation et export."]);
-    submit.push(["Dossier de presse", "Ajouter une version courte du pitch et une image de couverture."]);
+  if (scope === "extended") {
+    build.push(["Demo mode", "Add automatic navigation to present the project with less friction."]);
+    validate.push(["Visual audit", "Compare the main states after generation and export."]);
+    submit.push(["Press kit", "Add a short pitch and a cover image."]);
   }
 
   return { build, validate, submit };
 }
 
 function createArchitecture(preset, keywords, profile) {
-  const tags = keywords.length ? keywords.join(", ") : "brief, plan, qualite";
+  const tags = keywords.length ? keywords.join(", ") : "brief, plan, quality";
   const inputBody =
     profile.kind === "magic-list"
-      ? `Capture le brief et les faits publics Magic List: ${profile.facts.join(", ")}.`
-      : `Capture le brief, la categorie, le delai et l'ambition. Signaux detectes: ${tags}.`;
+      ? `Captures the brief and public Magic List facts: ${profile.facts.join(", ")}.`
+      : `Captures the brief, category, deadline, and ambition. Detected signals: ${tags}.`;
 
   return [
     {
@@ -379,44 +381,44 @@ function createArchitecture(preset, keywords, profile) {
     {
       chip: "GPT-5.6",
       title: "Model studio",
-      body: "Prepare un prompt structure, recoit la reponse GPT-5.6 et transforme les signaux du modele en choix produit."
+      body: "Prepares a structured prompt, receives the GPT-5.6 response, and turns model signals into product choices."
     },
     {
       chip: "Execution",
       title: preset.surfaces[2],
-      body: "Convertit le plan en taches, risques, garde-fous et criteres de verification."
+      body: "Converts the plan into tasks, risks, guardrails, and verification criteria."
     },
     {
       chip: "Output",
       title: preset.surfaces[3],
-      body: "Produit le pitch, le script demo, la checklist, la trace GPT-5.6 et un export Markdown partageable."
+      body: "Produces the pitch, demo script, checklist, GPT-5.6 trace, and shareable Markdown export."
     }
   ];
 }
 
 function createGptPrompt(preset, summary, scope, profile) {
-  const facts = profile.facts.length ? profile.facts.map((fact) => `- ${fact}`).join("\n") : "- Aucun fait externe verifie. Base-toi seulement sur le brief.";
+  const facts = profile.facts.length ? profile.facts.map((fact) => `- ${fact}`).join("\n") : "- No external facts verified. Use only the brief.";
 
-  return `Tu es GPT-5.6. Analyse ce projet comme un jury produit, design et implementation.
+  return `You are GPT-5.6. Analyze this project like a product, design, and implementation judge.
 
-Contexte
-- Projet: ${profile.label}
-- Categorie Build Week: ${state.category}
+Context
+- Project: ${profile.label}
+- Build Week category: ${state.category}
 - Audience: ${preset.audience}
-- Perimetre: ${scope}
+- Scope: ${scope}
 - Brief: ${summary}
 
-Faits publics verifies
+Verified public facts
 ${facts}
 
-Ta mission
-1. Trouver le positionnement le plus distinctif.
-2. Proposer 5 ameliorations a fort impact, classees par effort.
-3. Ecrire un script de demo de moins de 3 minutes.
-4. Identifier les risques de soumission et de produit.
-5. Separar clairement les faits verifies, les hypotheses et les recommandations.
+Your mission
+1. Find the most distinctive positioning.
+2. Propose 5 high-impact improvements, ranked by effort.
+3. Write a demo script under 3 minutes.
+4. Identify submission and product risks.
+5. Clearly separate verified facts, assumptions, and recommendations.
 
-Format attendu
+Expected format
 Positioning
 Feature bets
 App Store and onboarding
@@ -428,40 +430,40 @@ function analyzeGptResponse(text) {
   const lower = text.toLowerCase();
   const checks = [
     {
-      title: "Positionnement",
+      title: "Positioning",
       terms: ["positioning", "positionnement", "promise", "promesse", "niche"],
-      ready: "La reponse formule une promesse distinctive.",
-      missing: "Demander une phrase de positionnement plus nette."
+      ready: "The response creates a distinctive promise.",
+      missing: "Ask for a sharper positioning sentence."
     },
     {
-      title: "Vie privee",
+      title: "Privacy",
       terms: ["privacy", "private", "prive", "no tracking", "sans tracking", "on device", "local"],
-      ready: "La promesse de confidentialite est exploitable.",
-      missing: "Faire expliciter l'avantage no account, no tracking, donnees locales."
+      ready: "The privacy promise is usable.",
+      missing: "Ask the model to clarify no account, no tracking, and local data."
     },
     {
       title: "Roadmap",
       terms: ["feature", "roadmap", "amelioration", "template", "import", "export"],
-      ready: "La reponse contient des pistes produit concretes.",
-      missing: "Demander des ameliorations classees par effort et impact."
+      ready: "The response includes concrete product directions.",
+      missing: "Ask for improvements ranked by effort and impact."
     },
     {
       title: "App Store",
       terms: ["app store", "aso", "screenshot", "screenshots", "onboarding"],
-      ready: "La reponse peut nourrir la fiche App Store et l'onboarding.",
-      missing: "Demander une strategie ASO et des idees de captures."
+      ready: "The response can inform the App Store page and onboarding.",
+      missing: "Ask for ASO strategy and screenshot ideas."
     },
     {
       title: "Demo",
       terms: ["demo", "story", "script", "minute", "30 seconds"],
-      ready: "La reponse donne une histoire de demo filmable.",
-      missing: "Demander un script de demo de moins de 3 minutes."
+      ready: "The response gives a demo story that can be filmed.",
+      missing: "Ask for a demo script under 3 minutes."
     },
     {
-      title: "Risques",
+      title: "Risks",
       terms: ["risk", "risque", "avoid", "crowded", "subscription", "complex"],
-      ready: "Les risques sont identifies et actionnables.",
-      missing: "Demander les objections probables d'un jury."
+      ready: "Risks are identified and actionable.",
+      missing: "Ask for likely judge objections."
     }
   ];
 
@@ -481,59 +483,59 @@ function analyzeGptResponse(text) {
 function createGptEvidenceSection(gptAnalysis) {
   const ready = gptAnalysis.cards.filter((card) => card.status === "ready").map((card) => card.title);
   if (!state.gptResponse.trim()) {
-    return "Trace GPT-5.6\nA completer: coller une reponse GPT-5.6 dans le studio pour documenter les decisions issues du modele.";
+    return "GPT-5.6 Trace\nTo complete: paste a GPT-5.6 response into the Studio to document model-informed decisions.";
   }
 
-  return `Trace GPT-5.6
-Signaux detectes: ${ready.join(", ") || "a verifier"}.
-La reponse GPT-5.6 a ete utilisee comme materiau de decision, puis Codex Potential Lab l'a convertie en taches, risques, architecture et texte de soumission.`;
+  return `GPT-5.6 Trace
+Detected signals: ${ready.join(", ") || "to verify"}.
+The GPT-5.6 response was used as decision material, then Codex Potential Lab converted it into tasks, risks, architecture, and submission text.`;
 }
 
 function createSubmission(preset, summary, scope, score, profile, gptAnalysis) {
   const magicContext =
     profile.kind === "magic-list"
       ? `
-Cas Magic List
-Magic List est utilise comme app test: une to-do list iPhone/iPad simple et privee, sans publicite, sans compte, sans tracking, avec 3 listes gratuites, Premium en achat unique et donnees conservees sur l'appareil. L'objectif est de transformer ces faits en positionnement, roadmap, onboarding et demo.`
+Magic List case
+Magic List is used as a proof case: a simple and private iPhone/iPad to-do list with no ads, no account, no tracking, 3 free lists, Premium as a one-time purchase, and data stored on device. The goal is to turn those facts into positioning, roadmap, onboarding, and demo evidence.`
       : "";
 
-  return `Titre
+  return `Title
 ${preset.title}
 
-Categorie
+Category
 ${state.category}
 
 Pitch
-${preset.title} aide ${preset.audience} a transformer un brief en prototype demonstrable, plan de construction, preuves de qualite et dossier de soumission.
+${preset.title} helps ${preset.audience} turn a brief into a demonstrable prototype, build plan, quality evidence, and submission package.
 
 Description
-Le projet part d'une idee brute: ${summary}. L'application montre comment Codex peut cadrer le probleme, decomposer l'architecture, organiser l'execution, anticiper les risques, exploiter une reponse GPT-5.6 et produire une candidature claire dans un temps court. Le resultat est local, testable et exportable.${magicContext}
+The project starts from a rough idea: ${summary}. The app shows how Codex can frame the problem, break down the architecture, organize execution, anticipate risks, use a GPT-5.6 response, and produce a clear submission in a short time. The result is local, testable, and exportable.${magicContext}
 
-Ce qui montre le potentiel de Codex
-- Passage d'un brief naturel a un plan operationnel.
-- Interface complete creee comme produit, pas seulement comme maquette.
-- Studio GPT-5.6: prompt structure, reponse collee, analyse des signaux et trace exportable.
-- Generation de taches, risques, architecture et texte de soumission.
-- Documentation et dossier jury directement inclus.
-- Version autonome qui fonctionne sans compte ni installation complexe.
+What shows the potential of Codex
+- Turns a natural-language brief into an operational plan.
+- Complete interface built as a product, not just a mockup.
+- GPT-5.6 Studio: structured prompt, pasted response, signal analysis, and exportable trace.
+- Generates tasks, risks, architecture, and submission text.
+- Documentation and judging package are included directly.
+- Standalone version that works without an account or complex install.
 
 ${createGptEvidenceSection(gptAnalysis)}
 
-Plan demo
-1. Entrer un brief ou charger le cas Magic List.
-2. Choisir la categorie et l'ambition.
-3. Ouvrir GPT-5.6 Studio, copier le prompt, coller une reponse GPT-5.6 et l'analyser.
-4. Montrer architecture, qualite, checklist et trace GPT-5.6.
-5. Exporter le dossier Markdown.
+Demo plan
+1. Enter a brief or load the Magic List case.
+2. Choose the category and ambition.
+3. Open GPT-5.6 Studio, copy the prompt, paste a GPT-5.6 response, and analyze it.
+4. Show architecture, quality, checklist, and GPT-5.6 trace.
+5. Export the Markdown package.
 
-Niveau de preparation
-Score interne: ${score}/99
-Perimetre: ${scope}
+Readiness
+Internal score: ${score}/99
+Scope: ${scope}
 
-Liens a completer
-Depot:
+Links to complete
+Repository:
 Video YouTube:
-Demo en ligne:
+Live demo:
 Session ID Codex:`;
 }
 
@@ -542,8 +544,8 @@ function render() {
   const { preset, summary, score } = model;
 
   elements.title.textContent = preset.title;
-  elements.pitch.textContent = `${summary} Un systeme local transforme l'intention en actions, risques, architecture, trace GPT-5.6 et dossier jury.`;
-  elements.outcome.textContent = `En ${state.deadline} heures, ${preset.title} vise une preuve de valeur complete pour ${preset.audience}: un flux utile, une implementation claire, une demo fluide, une trace GPT-5.6 et une soumission credible.`;
+  elements.pitch.textContent = `${summary} A local system turns intent into actions, risks, architecture, GPT-5.6 trace, and judging package.`;
+  elements.outcome.textContent = `In ${state.deadline} hours, ${preset.title} aims to deliver a complete proof of value for ${preset.audience}: a useful flow, clear implementation, smooth demo, GPT-5.6 trace, and credible submission.`;
   elements.score.textContent = score;
   elements.taskCount.textContent = Object.values(model.tasks).flat().length;
   elements.riskCount.textContent = templates.risks.length;
@@ -629,9 +631,9 @@ function renderArchitecture(nodes) {
 
 function renderTasks(tasks) {
   const columns = [
-    ["Construire", tasks.build],
-    ["Verifier", tasks.validate],
-    ["Soumettre", tasks.submit]
+    ["Build", tasks.build],
+    ["Verify", tasks.validate],
+    ["Submit", tasks.submit]
   ];
 
   elements.tasks.innerHTML = columns
@@ -697,11 +699,11 @@ ${model.submission}
 
 ${model.gptPrompt}
 
-## Reponse GPT-5.6
+## GPT-5.6 Response
 
-${state.gptResponse.trim() || "A completer avec une vraie reponse GPT-5.6."}
+${state.gptResponse.trim() || "To complete with a real GPT-5.6 response."}
 
-## Analyse GPT-5.6
+## GPT-5.6 Analysis
 
 ${model.gptAnalysis.cards.map((card) => `- ${card.title}: ${card.body}`).join("\n")}
 
@@ -727,7 +729,7 @@ ${model.readiness.decisions.map((item) => `- ${item.title}: ${item.body}`).join(
 
 ${model.architecture.map((node) => `### ${node.title}\n${node.body}`).join("\n\n")}
 
-## Taches
+## Tasks
 
 ${Object.entries(model.tasks)
   .map(([group, items]) => `### ${group}\n${items.map(([title, body]) => `- ${title}: ${body}`).join("\n")}`)
@@ -747,7 +749,7 @@ ${templates.checklist.map((item) => `- [ ] ${item}`).join("\n")}
   link.click();
   link.remove();
   URL.revokeObjectURL(url);
-  showToast("Export Markdown genere.");
+  showToast("Markdown export generated.");
 }
 
 async function copyPrompt() {
@@ -758,7 +760,7 @@ async function copyPrompt() {
     elements.gptPrompt.select();
     document.execCommand("copy");
   }
-  showToast("Prompt GPT-5.6 copie.");
+  showToast("GPT-5.6 prompt copied.");
 }
 
 function loadMagicListCase() {
@@ -769,13 +771,13 @@ function loadMagicListCase() {
   elements.gptResponse.value = magicListCase.sampleGptResponse;
   render();
   activateView("gpt");
-  showToast("Cas Magic List charge.");
+  showToast("Magic List case loaded.");
 }
 
 function loadSampleGptResponse() {
   elements.gptResponse.value = magicListCase.sampleGptResponse;
   render();
-  showToast("Exemple GPT-5.6 charge.");
+  showToast("GPT-5.6 example loaded.");
 }
 
 function startDemoMode() {
@@ -783,19 +785,19 @@ function startDemoMode() {
   stopDemoMode();
   state.demoIndex = 0;
   activateView(ids[0]);
-  elements.demo.textContent = "Arreter demo";
+  elements.demo.textContent = "Stop demo";
   state.demoTimer = window.setInterval(() => {
     state.demoIndex = (state.demoIndex + 1) % ids.length;
     activateView(ids[state.demoIndex]);
   }, 2200);
-  showToast("Mode demo actif.");
+  showToast("Demo mode active.");
 }
 
 function stopDemoMode() {
   if (state.demoTimer) {
     window.clearInterval(state.demoTimer);
     state.demoTimer = null;
-    elements.demo.innerHTML = '<span aria-hidden="true">▶</span> Mode demo';
+    elements.demo.innerHTML = '<span aria-hidden="true">▶</span> Demo mode';
   }
 }
 
@@ -813,11 +815,11 @@ function saveState() {
     ambition: elements.ambition.value,
     gptResponse: elements.gptResponse.value
   };
-  localStorage.setItem("codexPotentialLab", JSON.stringify(snapshot));
+  localStorage.setItem(storageKey, JSON.stringify(snapshot));
 }
 
 function restoreState() {
-  const raw = localStorage.getItem("codexPotentialLab");
+  const raw = localStorage.getItem(storageKey);
   if (!raw) return;
 
   try {
@@ -828,7 +830,7 @@ function restoreState() {
     elements.ambition.value = saved.ambition || elements.ambition.value;
     elements.gptResponse.value = saved.gptResponse || elements.gptResponse.value;
   } catch {
-    localStorage.removeItem("codexPotentialLab");
+    localStorage.removeItem(storageKey);
   }
 }
 
@@ -841,13 +843,13 @@ elements.tabs.forEach((tab) => {
 
 elements.generate.addEventListener("click", () => {
   render();
-  showToast("Plan regenere.");
+  showToast("Plan regenerated.");
 });
 
 elements.demo.addEventListener("click", () => {
   if (state.demoTimer) {
     stopDemoMode();
-    showToast("Mode demo arrete.");
+    showToast("Demo mode stopped.");
   } else {
     startDemoMode();
   }
@@ -859,7 +861,7 @@ elements.copyPrompt.addEventListener("click", copyPrompt);
 elements.sampleGpt.addEventListener("click", loadSampleGptResponse);
 elements.analyzeGpt.addEventListener("click", () => {
   render();
-  showToast("Reponse GPT-5.6 analysee.");
+  showToast("GPT-5.6 response analyzed.");
 });
 
 [elements.brief, elements.category, elements.deadline, elements.ambition].forEach((element) => {
